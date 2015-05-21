@@ -12,11 +12,11 @@ Colors
 
 
 body {
-
+ font-family: "Montserrat", sans-serif;
 }
 
 a {
-    color: #454545;
+  color: #454545;
 }
 
 a:hover {
@@ -24,12 +24,48 @@ a:hover {
 }
 
 
+/* Banner */
+section.banner {
+  width: 100%;
+  height: 100%;
+  max-height: 400px;
+  overflow: hidden;
+}
+
+section.banner img {
+  width: 100%;
+  height: auto;
+}
 
 
+/* Quick Buttons - Three Column */
+div.three {
+  text-align: center;
+  padding: 60px 0px;
+  color: #707070;
+  font-weight: light;
+}
+div.three h3 {
+  text-transform: uppercase;
+  
+}
+div.three p {
+  width: 60%;
+  margin: 0px auto;
+  display: block;
+}
 
+/* Map section */
+section.map {
+  background-color: #F4F8F6;
+  padding: 60px 0px;
+  text-align: center;
+}
+section.map h3 {
+  text-transform: uppercase;
+  color: #707070;
 
-
-
+}
 
 
 
