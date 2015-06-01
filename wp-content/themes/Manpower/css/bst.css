@@ -663,17 +663,62 @@ PAGE-testimonials template Styles
   margin-bottom: 40px;
   border-bottom: 1px solid rgba(0,0,0,0.1);
 }
-
+.testimonial-row:last-child {
+  padding: 20px 0 30px 0;
+  margin-bottom: 40px;
+  border-bottom: none;
+}
 .testimonial-row:first-child {
   padding-top: 0px;
 }
+.testimonial-row .circle {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 1px solid black;
+  overflow: hidden;
+  margin: 0px auto;
+}
+.testimonial-row .circle img {
+  text-align: center;
+}
+.testimonial-row p.quote {
+  font-family: "montserratlight";
+  font-size: 20px;
+  color: #777;
+  padding-bottom: 30px;
+}
+/* Odd right */
+.testimonial-row p.text-right strong {
+  font-family: "montserratregular";
+  font-size: 16px;
+  color: #777;
+  text-transform: uppercase;
+}
+.testimonial-row p.text-right {
+  font-family: "montserratlight";
+  font-size: 15px;
+  color: #777;
+}
+/* Even row */
+.testimonial-row p.text-left strong {
+  font-family: "montserratregular";
+  font-size: 16px;
+  color: #777;
+  text-transform: uppercase;
 
+}
+.testimonial-row p.text-left {
+  font-family: "montserratlight";
+  font-size: 15px;
+  color: #777;
+}
 
+/* Share Your Story */
 
-
-
-
-
+.share-your-story {
+  background-color: #6390c7;
+}
 
 
 
