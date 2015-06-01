@@ -13,7 +13,7 @@
 <div class="container">
   <div class="row">
 
-    <div class="col-xs-10 col-xs-offset-1 narrow">
+    <div class="col-xs-12 col-sm-8">
       <div id="content" role="main">
         <?php get_template_part('includes/loops/content', 'page'); ?>
       </div><!-- /#content -->

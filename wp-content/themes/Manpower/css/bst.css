@@ -1,70 +1,671 @@
 /* Manpower Stylesheet
 
-Colors
- -Green   =    #729784
+
+/* font-family: '  montserratbold '; */
+@font-face {
+    font-family: 'montserratbold';
+    src: url('../fonts/montserrat-bold-webfont.eot');
+    src: url('../fonts/montserrat-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/montserrat-bold-webfont.woff2') format('woff2'),
+         url('../fonts/montserrat-bold-webfont.woff') format('woff'),
+         url('../fonts/montserrat-bold-webfont.ttf') format('truetype'),
+         url('../fonts/montserrat-bold-webfont.svg#montserratbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* font-family: '  montserrathairline  '; */
+@font-face {
+    font-family: 'montserrathairline';
+    src: url('../fonts/montserrat-hairline-webfont.eot');
+    src: url('../fonts/montserrat-hairline-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/montserrat-hairline-webfont.woff2') format('woff2'),
+         url('../fonts/montserrat-hairline-webfont.woff') format('woff'),
+         url('../fonts/montserrat-hairline-webfont.ttf') format('truetype'),
+         url('../fonts/montserrat-hairline-webfont.svg#montserrathairline') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* font-family: '  montserratlight  '; */
+@font-face {
+    font-family: 'montserratlight';
+    src: url('../fonts/montserrat-light-webfont.eot');
+    src: url('../fonts/montserrat-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/montserrat-light-webfont.woff2') format('woff2'),
+         url('../fonts/montserrat-light-webfont.woff') format('woff'),
+         url('../fonts/montserrat-light-webfont.ttf') format('truetype'),
+         url('../fonts/montserrat-light-webfont.svg#montserratlight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+/* font-family: '  montserratregular  '; */
+@font-face {
+    font-family: 'montserratregular';
+    src: url('../fonts/montserrat-regular-webfont.eot');
+    src: url('../fonts/montserrat-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/montserrat-regular-webfont.woff2') format('woff2'),
+         url('../fonts/montserrat-regular-webfont.woff') format('woff'),
+         url('../fonts/montserrat-regular-webfont.ttf') format('truetype'),
+         url('../fonts/montserrat-regular-webfont.svg#montserratregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/* Colors
+ -Green   =    #6e9082
  -Red     =    #A13841
- -Orange  =    #D07017
+ -Orange  =    #e87c22
  -Lt Blue =    #5B8DBA
  -Blue    =    #3E639B
  -Lt Grey =    #F4F8F6
+ -Gray    =    #383839
 
     */
 
 
+
+
 body {
- font-family: "Montserrat", sans-serif;
+ font-family: "montserratregular", sans-serif;
+ letter-spacing: 1.4px;
 }
 
 a {
-  color: #454545;
+  opacity: 1.0;
+  color: #A1A1A1;
 }
 
 a:hover {
-
+  opacity: 0.9;
 }
 
 
-/* Banner */
-section.banner {
-  width: 100%;
-  height: 100%;
-  max-height: 400px;
-  overflow: hidden;
-}
+/* ------------
 
-section.banner img {
-  width: 100%;
-  height: auto;
-}
+INCLUDES Styles 
 
+-------------- */
 
-/* Quick Buttons - Three Column */
-div.three {
-  text-align: center;
-  padding: 60px 0px;
-  color: #707070;
-  font-weight: light;
-}
-div.three h3 {
-  text-transform: uppercase;
+  /* Banner */
+  section.banner {
+    width: 100%;
+    height: 100%;
+    max-height: 400px;
+    overflow: hidden;
+    position: relative;
+  }
+  section.banner img {
+    width: 100%;
+    height: auto;
+  }
+  section.banner .overlay {
+    z-index: 2;
+    position: absolute;
+    top: 15%;
+    left: 8%;
+  }
+  section.banner .overlay h2 {
+    color: #F4F8F6;
+    font-family: "montserratlight";
+    font-size: 40px;
+    line-height: 1.6;
+    padding-bottom: 30px;
+  }
+  section.banner .overlay .col-xs-3 a {
+    color: #fff;
+    font-family: "montserratlight";
+    font-size: 16px;
+    display: block;
+    border: 1px solid #fff;
+    border-radius: 4px;
+    padding-top: 18px;
+    width: 100%;
+    height: 80px;
+    text-align: center;
+    background-color: rgba(255,255,255,0.0);
+  }
+  section.banner .overlay .col-xs-3 a:hover {
+    text-decoration: none;
+    background-color: rgba(255,255,255,0.1);
+  }
+
+/*---- HEADER ----*/
+  nav.navbar-default {
+    height: 110px;
+    background-color: #fff;
+    border: none;
+  }
+  /* Brand */
+  nav.navbar-default a.navbar-brand {
+    height: auto;
+    padding-left: 60px;
+  }
+  nav.navbar-default a.navbar-brand img.logo {
+    padding-top: 15px;
+  }
+
+  /* Top Bar */
+  nav.navbar-default .top {
+    float: right;
+  }
+  nav.navbar-default .top ul {
+    list-style-type: none;
+  }
+  nav.navbar-default .top ul > li {
+    display: inline;
+    padding-right: 6px;
+    color: #777;
+  }
+  nav.navbar-default .top ul > li.top-phone {
+    line-height: 2px;
+  }
+  nav.navbar-default .top ul > li.top-phone > img {
+    
+  }
+  nav.navbar-default .top ul > li.top-phone p {
+    padding-top: 20px;
+    display: inline-block;
+  }
+
+  nav.navbar-default .top ul > li > a >img {
+    opacity: 1.0;
+  }
+  nav.navbar-default .top ul > li > a:hover >img {
+    opacity: 0.8;
+  }
+    /* econnect button */
+  nav.navbar-default .top ul li:last-child {
+    background-color: #6e9082;
+    padding: 20px 30px 10px 30px;
+    line-height: 3;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+  }
+  nav.navbar-default .top ul li:last-child a {
+    color: #fff;
+    opacity: 1.0;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+  nav.navbar-default .top ul li:last-child a:hover {
+    opacity: 0.8;
+  }
+
+/*---- NAVIGATION ----*/
   
-}
-div.three p {
-  width: 60%;
-  margin: 0px auto;
-  display: block;
+  ul.navbar-nav, ul.navbar-right {
+    margin-top: 0px;
+    float: right;
+  }
+
+  /* overwrite defaults */
+  .navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover {
+    background-color: #fff;
+    color: #e87c22;
+  }
+  /* overwrite ACTIVE link styles*/
+  nav.navbar-default ul.navbar-nav > li.active > a
+   {
+    background-color: transparent;
+    color: #e87c22;
+  }
+  nav.navbar-default ul.navbar-nav > li.active > a:hover {
+    background-color: transparent;
+    color: #e87c22;
+  }
+  /* current parent of active page*/
+  nav.navbar-default ul.navbar-nav > li.current_page_parent a {
+    color: #e87c22;
+  }
+  nav.navbar-default ul.navbar-nav > li.current_page_parent ul.dropdown-menu > li > a {
+    color: #777;
+  }
+  nav.navbar-default ul.navbar-nav > li.current_page_parent ul.dropdown-menu > li > a:hover {
+    background-color: transparent;
+    color: #e87c22;
+  }
+  /* current page in dropdown */
+  nav.navbar-default ul.navbar-nav > li.current_page_parent ul.dropdown-menu li.current_page_item a {
+    color: #5B8DBA;
+  }
+  nav.navbar-default ul.navbar-nav > li.current_page_parent ul.dropdown-menu li.current_page_item a:hover {
+    color: #e87c22;
+  }
+
+
+
+    /* clear float */
+  .menu-main-nav-container {
+    clear: right;
+  }
+  ul.navbar-nav li a {
+    text-transform: uppercase;
+    color: #383839;
+  }
+
+  ul.navbar-nav li.active a {
+    background-color: transparent;
+  }
+  nav.navbar-default ul.navbar-nav>li>a:hover {
+    color: #e87c22;
+  }
+  /* dropdown menus */
+  ul.dropdown-menu {
+    border: none;
+    box-shadow: none;
+    background-color: rgba(255,255,255,0.7);
+
+  }
+  ul.dropdown-menu li a {
+    text-transform: none;
+    color: #383839;
+  }
+  ul.dropdown-menu > li > a:hover {
+    background-color: transparent;
+    color: #5B8DBA;
+  }
+  /* Search */
+  form.navbar-form .form-group {
+    display: none;
+  }
+
+
+
+
+ /*---- FOOTER ----*/
+  section.footer {
+    padding: 60px 0px;
+  }
+  section.footer a {
+    opacity: 1.0;
+  }
+  section.footer a:hover {
+    opacity: 0.8;
+    color: #A1A1A1;
+    text-decoration: none;
+  }
+  section.footer .col-sm-4 {
+    /* Border to left-column */
+    padding-right: 40px;
+    border-right: 1px solid rgba(0,0,0,0.1);
+  }
+
+  /* Associates Links */
+  .col-xs-6 p:first-child {
+    text-transform: uppercase;
+    color: #383839;
+    margin-bottom: 4px;
+  }
+  ul.associates-links {
+    list-style-type: none;
+    color: #A1A1A1;
+    margin-left: -40px;
+    font-size: 13px;
+    font-weight: ligher;
+  }
+  ul.associates-links li {
+    margin-bottom: 4px;
+  }
+  ul.site-links {
+    list-style-type: none;
+    text-transform: uppercase;
+  }
+  ul.site-links > li > a {
+    color: #383839;
+    opacity: 1.0;
+  }
+  ul.site-links > li > a:hover {
+    opacity: 0.9;
+  }
+  .richmond-address p {
+    width: 100%;
+    display: block;
+    color: #A1A1A1;
+    font-size: 13px;
+  }
+  .richmond-address p strong {
+    color: #383839;
+    font-size: 14px;
+    text-transform: uppercase; 
+  }
+  .portland-address p {
+    width: 100%;
+    display: block;
+    color: #A1A1A1;
+    font-size: 13px;
+  }
+  .portland-address p strong {
+    color: #383839;
+    font-size: 14px;
+    text-transform: uppercase;
+  }
+
+  /* Small Footer */
+  footer.site-footer {
+    background-color: #383839;
+    padding: 15px 0px;
+  }
+  footer.site-footer ul {
+    list-style-type: none;
+    float: right;
+    margin-bottom: 0px;
+  }
+  footer.site-footer ul li {
+    display: inline;
+    color: #A1A1A1;
+    padding-right: 20px;
+  }
+  footer.site-footer a {
+    opacity: 1.0;
+  }
+  footer.site-footer a:hover {
+    opacity: 0.9;
+    text-decoration: none;
+    color: #A1A1A1;
+  }
+
+
+
+
+
+/* ------------
+
+FRONT-PAGE template Styles 
+
+-------------- */
+
+
+  /* Quick Buttons - Three Column */
+  .three {
+    text-align: center;
+    padding: 60px 0px;
+    color: #707070;
+  }
+  .three h3 {
+    text-transform: uppercase;
+    color: #404040; 
+  }
+  .three p {
+    width: 60%;
+    margin: 0px auto;
+    display: block;
+  }
+
+  /* Map section */
+  section.map {
+    background-color: #F4F8F6;
+    height: 500px;
+  }
+  section.map .map-wrap {
+    position: relative;
+  }
+  section.map .circle-wrap {
+    position: absolute;
+    left: 29%;
+    top: 44px;
+  }
+  section.map .circle-wrap h3 {
+    color: #404040;
+    text-transform: uppercase;
+    text-align: center;
+  }
+  section.map .circle-wrap p {
+    color: #707070;
+    text-transform: lowercase;
+    text-align: center;
+    width: 200px;
+    margin: 0px auto;
+    margin-bottom: 20px;
+    display: block;
+  }
+
+  /*---- COUNTIES ----*/
+  section.map .counties-wrap {
+    position: absolute;
+    left: 51%;
+    width: 220px;
+    height: 400px;
+  }
+  section.map .counties-wrap .counties {
+    position: relative;
+    margin-top: 100px;
+  }
+  section.map .counties-wrap .counties a.county-shapes  {
+    position: absolute;
+    display: block;
+    opacity: 1.0;
+  }
+
+  section.map .counties-wrap .counties a.county-shapes img {
+    width: 98%;
+    transition: width linear 80ms;
+    -webkit-transition: width linear 80ms;
+  }
+  /* county-shapes hover */
+  section.map .counties-wrap .counties a.county-shapes:hover img {
+    width: 100%;
+  }
+/* ---- INDIVIDUAL COUNTY SHAPES/BUTTONS ---- */
+  /* blackford county */
+  section.map .counties-wrap .counties a.county-shapes:nth-child(1){
+    top: 0;
+    left: 0;
+    z-index: 2;
+  }
+  /* jay county */
+  section.map .counties-wrap .counties a.county-shapes:nth-child(2) {
+    top: -3px;
+    left: 54px;
+    z-index: 3;
+  }
+  /* randolph county */
+  section.map .counties-wrap .counties a.county-shapes:nth-child(3) {
+    top: 78px;
+    left: 54px;
+    z-index: 4;
+  }
+  /* wayne county */
+  section.map .counties-wrap .counties a.county-shapes:nth-child(4) {
+    top: 174px;
+    left: 55px;
+    z-index: 5;
+  }
+  /* henry county */
+  section.map .counties-wrap .counties a.county-shapes:nth-child(5) {
+    top: 153px;
+    left: -36px;
+    z-index: 6;
+  }
+  /* fayette county */
+  section.map .counties-wrap .counties a.county-shapes:nth-child(6) {
+    top: 244px;
+    left: 36px;
+    z-index: 7;
+  }
+  /* union county */
+  section.map .counties-wrap .counties a.county-shapes:nth-child(7) {
+    top: 262px;
+    left: 101px;
+    z-index: 8;
+  }
+
+
+
+
+
+/* ------------
+
+PAGE- template Styles 
+
+-------------- */
+
+  /* Page Title Banners */
+  .banner {
+    height: 230px;
+  }
+    /* e-connect & about */
+    .banner.e-connect, .banner.about {
+      background-color: #6e9082;
+    }
+    .e-connect h2.text-center, .about h2.text-center {
+      margin-top: 96px;
+      color: #fff;
+      letter-spacing: 3px;
+    }
+    /* our-services */
+    .banner.our-services {
+      background-color: #e87c22;
+    }
+    .our-services h2.text-center {
+      margin-top: 96px;
+      color: #fff;
+      letter-spacing: 3px;
+    }
+    /* associate testimonials */
+    .banner.associate-testimonials {
+      background-color: #5B8DBA;
+    }
+    .associate-testimonials h2.text-center {
+      margin-top: 96px;
+      color: #fff;
+      letter-spacing: 3px;
+    }
+    
+    /* job-resources */
+    .banner.job-resources {
+      background-color: #5B8DBA;
+    }
+    .job-resources h2.text-center {
+      margin-top: 96px;
+      color: #fff;
+      letter-spacing: 3px;
+    }
+
+
+/* ------------
+
+PAGE-about template Styles 
+
+-------------- */
+.about-content h2 {
+  text-align: center;
+  font-family: "montserratlight";
+  color: #e87c22;
+  padding: 60px 0px 22px 0px;
 }
 
-/* Map section */
-section.map {
-  background-color: #F4F8F6;
-  padding: 60px 0px;
+.about-content p {
+  line-height: 2;
+  font-family: "montserratlight";
+  color: #777;
   text-align: center;
 }
-section.map h3 {
-  text-transform: uppercase;
-  color: #707070;
 
+/* mpr video */
+.mpr-vid iframe {
+  width: 100% !important;
+}
+
+
+
+
+/* ------------
+
+PAGE-our-services template Styles 
+
+-------------- */
+.narrow {
+  padding-left: 0px;
+}
+.our-services-content {
+  padding: 80px 0px;
+}
+/* Left Column */
+.our-services-content .col-md-7 {
+  border-right: 1px solid rgba(0,0,0,0.1);
+}
+.our-services-content .col-md-7 p {
+  padding-right: 20px;
+}
+.our-services-content .col-md-7 p:nth-child(1) {
+  font-family: "montserratlight";
+  font-size: 24px;
+  color: #777;
+  padding-top: 20px;
+}
+/* Orange text */
+.our-services-content .col-md-7 p strong {
+  font-family: "montserratlight";
+  font-size: 24px;
+  color: #e87c22;
+}
+
+/* Right Column */
+.our-services-content p.side-service:nth-child(1) {
+  padding: 24px 0px 10px 60px;
+  color: #777;
+}
+
+.our-services-content p.side-service {
+  padding: 0px 0px 10px 60px;
+  color: #777;
+
+}
+
+/* Full Service Loop */
+.full-service {
+  width: 100%;
+  padding-top: 40px;
+  background-color: #f5faf8;
+}
+.full-service .container {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+.full-service .container .narrow {
+  padding-bottom: 40px;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+.services .full-service:last-child .narrow {
+  padding-bottom: 40px;
+  border-bottom: none;
+}
+.full-service h4 {
+  color: #e87c22;
+  font-family: "montserratregular";
+  font-size: 24px;
+}
+.full-service p {
+  color: #777;
+  font-family: "montserratlight";
+  letter-spacing: 1px;
+  font-size: 15px;
+}
+.full-service a:hover {
+  text-decoration: none;
+  color: #777;
+  cursor: pointer !important;
+}
+
+
+
+
+/* ------------
+
+PAGE-testimonials template Styles 
+
+-------------- */
+
+.testimonial-row {
+  padding: 20px 0 30px 0;
+  margin-bottom: 40px;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+.testimonial-row:first-child {
+  padding-top: 0px;
 }
 
 
@@ -77,6 +678,39 @@ section.map h3 {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
+-----------------------------------------------------
+SIMON PADBURY DEFAULT "BST" THEME STYLES
+-----------------------------------------------------
+*/
 
 
 

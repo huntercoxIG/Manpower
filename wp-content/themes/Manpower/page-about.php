@@ -13,17 +13,19 @@
 <div class="container">
   <div class="row">
 
+    
     <div class="col-xs-10 col-xs-offset-1 narrow">
-      <div id="content" role="main">
+      <div id="content" role="main" class="about-content">
         <?php get_template_part('includes/loops/content', 'page'); ?>
       </div><!-- /#content -->
     </div>
     
-    <div class="col-xs-6 col-sm-4" id="sidebar" role="navigation">
-      <?php get_template_part('includes/sidebar'); ?>
-    </div>
-    
   </div><!-- /.row -->
 </div><!-- /.container -->
+
+<!-- Manpower Richmond video -->
+<div class="container-fluid mpr-vid">
+  <iframe width="1280" height="720" src="https://www.youtube.com/embed/aCmPDi5u3vg" frameborder="0" allowfullscreen></iframe>
+</div>
 
 <?php get_template_part('includes/footer'); ?>

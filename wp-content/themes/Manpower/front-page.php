@@ -9,12 +9,16 @@
 			<h2 class="text-center"><?php echo CFS()->get('heading_text'); ?></h2>
 
 			<div class="row">
-				<div class="col-xs-6">
-					<p class="text-right"><?php echo CFS()->get('left_box_text'); ?></p>
+				<div class="col-xs-3"></div>
+				<!--  Search jobs nearby -->
+				<div class="col-xs-3">
+					<a href="/wp-content/themes/Manpower/page-e-connect.php"><?php echo CFS()->get('left_box_text'); ?></a>
 				</div>
-				<div class="col-xs-6">
-					<p class="text-left"><?php echo CFS()->get('right_box_text'); ?></p>
+				<!-- Fill out a job application -->
+				<div class="col-xs-3">
+					<a href="/wp-content/themes/Manpower/page-contact.php"><?php echo CFS()->get('right_box_text'); ?></a>
 				</div>
+				<div class="col-xs-3"></div>
 			</div>
 		</div>
 	</section>
@@ -47,14 +51,28 @@
 
 <!-- Map section -->
 <section class="map">
-	<div class="container">
-		<div class="row">
+	<div class="map-wrap">
+		<div class="circle-wrap">
 			<h3>A Closer Look</h3>
 			<p>at the counties where we have jobs for you.</p>
 
-			<img src="<?php echo CFS()->get('map_image'); ?>" alt="map of counties that Manpower ECI serves; Blackford, Fayette, Henry, Jay, Randolph, Union, and Waynes.">
-		</div>
-	</div>
+			<!-- Circular Map of Indiana + Highlighted counties -->
+			<img src="wp-content/themes/Manpower/img/map.png" alt="">
+		</div><!-- /.circle-wrap -->
+
+		<!-- Individual County shapes -->
+		<div class="counties-wrap">
+			<div class="counties">
+				<a href="" class="county-shapes"><img src="/wp-content/themes/Manpower/img/blackford.png" alt=""></a>
+				<a href="" class="county-shapes"><img src="/wp-content/themes/Manpower/img/jay.png" alt=""></a>
+				<a href="" class="county-shapes"><img src="/wp-content/themes/Manpower/img/randolph.png" alt=""></a>
+				<a href="" class="county-shapes"><img src="/wp-content/themes/Manpower/img/wayne.png" alt=""></a>
+				<a href="" class="county-shapes"><img src="/wp-content/themes/Manpower/img/henry.png" alt=""></a>
+				<a href="" class="county-shapes"><img src="/wp-content/themes/Manpower/img/feyette.png" alt=""></a>
+				<a href="" class="county-shapes"><img src="/wp-content/themes/Manpower/img/union.png" alt=""></a>
+			</div>
+		</div><!-- /.counties-wrap -->	
+	</div><!-- /.map-wrap -->
 </section>	
 
 <?php get_template_part('includes/footer'); ?>
