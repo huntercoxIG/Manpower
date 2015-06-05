@@ -199,7 +199,11 @@ INCLUDES Styles
     margin-top: 0px;
     float: right;
   }
-
+  
+  .navbar-nav>li>a {
+    padding: 0px !important;
+    margin: 15px;
+  }
   /* overwrite defaults */
   .navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover {
     background-color: #fff;
@@ -542,7 +546,16 @@ PAGE- template Styles
       color: #fff;
       letter-spacing: 3px;
     }
-
+    
+    /* staff/team */
+    .banner.our-team {
+      background-color: #69aac4;
+    }
+    .banner.our-team h2.text-center {
+      margin-top: 96px;
+      color: #fff;
+      letter-spacing: 3px;
+    }
 
 /* ------------
 
@@ -658,6 +671,9 @@ PAGE-testimonials template Styles
 
 -------------- */
 
+.testimonials-content {
+  padding: 80px 0px;
+}
 .testimonial-row {
   padding: 20px 0 30px 0;
   margin-bottom: 40px;
@@ -672,15 +688,17 @@ PAGE-testimonials template Styles
   padding-top: 0px;
 }
 .testimonial-row .circle {
-  width: 150px;
-  height: 150px;
+  width: 160px;
+  height: 160px;
   border-radius: 50%;
-  border: 1px solid black;
+  border: 1px solid rgba(0,0,0,0.1);
   overflow: hidden;
   margin: 0px auto;
 }
 .testimonial-row .circle img {
   text-align: center;
+  width: 100%;
+  height: 100%;
 }
 .testimonial-row p.quote {
   font-family: "montserratlight";
@@ -688,7 +706,7 @@ PAGE-testimonials template Styles
   color: #777;
   padding-bottom: 30px;
 }
-/* Odd right */
+/* Odd row */
 .testimonial-row p.text-right strong {
   font-family: "montserratregular";
   font-size: 16px;
@@ -715,10 +733,316 @@ PAGE-testimonials template Styles
 }
 
 /* Share Your Story */
-
 .share-your-story {
-  background-color: #6390c7;
+  background-color: #E4EBF6;
+  padding: 40px 0px;
 }
+.share-your-story h4 {
+  font-size: 44px;
+  color: #5B8DBA;
+  font-family: "montserratregular";
+  padding-top: 40px;
+  padding-left: 40px;
+  margin: 0px;
+}
+.share-your-story p {
+  color: #777;
+  font-size: 20px;
+  font-family: "montserratlight";
+  padding-top: 20px;
+  padding-left: 40px;
+}
+
+.share-your-story .gform_wrapper {
+  margin: 0px;
+}
+.gform_wrapper .top_label .gfield_label {
+  color: #777;
+  text-transform: uppercase;
+  font-family: "montserratregular";
+  margin-bottom: 4px !important;
+}
+.gform_wrapper label.gfield_label+div.ginput_container {
+  margin-top: 0px !important;
+}
+.share-your-story .gform_wrapper li#field_1_1 {
+  clear: none !important;
+  float: left;
+  width: 50%;
+}
+.share-your-story .gform_wrapper li#field_1_2 {
+  clear: none !important;
+  float: left;
+  width: 50%;
+}
+
+.gform_wrapper .top_label input.medium {
+  width: 90% !important;
+}
+
+.gform_wrapper .gform_footer input.button {
+  width: 97.5% !important;
+  background-color: #5B8DBA; 
+}
+.gform_wrapper .gform_footer input.button:hover {
+  width: 97.5% !important;
+  background-color: #3E639B;
+  text-transform: uppercase;
+}
+
+
+
+
+
+/* ------------
+
+PAGE-our-team template Styles 
+
+-------------- */
+
+.our-team .member-block {
+  padding-top: 80px;
+}
+.our-team .member-block img.team-pic {
+  border: 1px solid rgba(0,0,0,0.1);
+}
+
+.our-team .member-block .member-name {
+  color: #e87c22;
+  font-size: 20px;
+  font-family: "montserratlight";
+  margin-top: 10px;
+}
+
+.our-team .member-block .member-title {
+  color: #777;
+  font-size: 17px;
+  font-family: "montserratlight";
+}
+
+/* group image */
+.group-picture {
+  padding-top: 60px;
+  height: 600px;
+  min-height: 600px;
+  overflow: hidden;
+}
+.group-picture img {
+  width: 100%;
+  height: auto;
+}
+
+
+
+
+
+
+/* ------------
+
+Counties template Styles 
+
+-------------- */
+
+
+/* County Banner */
+.banner {
+  overflow: hidden;
+}
+.banner img.county-banner {
+  width: 100%;
+}
+
+/* County Introduction */
+.county-intro {
+  padding: 60px 0px;
+}
+.county-intro h1 {
+  color: #5B8DBA;
+  font-family: "montserratlight";
+  text-align: center;
+  margin: 0px;
+  margin-bottom: 30px;
+}
+.county-intro article.page {
+  margin-bottom: 0px !important;
+}
+.county-intro article.page p {
+  display: block;
+  margin: 0px auto;
+  width: 80%;
+  color: #777;
+  font-family: "montserratlight";
+  font-size: 15px;
+  line-height: 2;
+}
+
+/* County Statistics */
+.statistics {
+  background-color: #e87c22;
+  color: #fff;
+  padding: 20px 0px;
+  text-align: center;
+  font-family: "montserratlight";
+}
+
+
+
+
+/* Successful Associates Slider */
+h2.successful-associates-title {
+  color: #5B8DBA;
+  font-family: "montserratlight";
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  font-size: 36px;
+}
+.successful-associates .slick-slide img {
+  margin: 0px auto;
+}
+
+
+
+/* Our Clients */
+.our-clients {
+  background-color: #6e9082;
+  color: #fff;
+  font-family: "montserratlight";
+  padding: 20px 0px;
+}
+.our-clients h2 {
+  font-family: "montserrathairline";
+  font-size: 42px;
+  margin: 10px 0px 20px 0px;
+}
+.our-clients ul {
+  list-style-type: none;
+  text-align: center;
+}
+.our-clients ul li {
+  font-family: "montserrathairline";
+  display: inline;
+  padding-right: 15px;
+  margin-right: 15px;
+  border-right: 1px solid rgba(255,255,255,0.5);
+}
+.our-clients ul li:last-child {
+  border-right: none;
+}
+.our-clients ul li a {
+  color: #fff;
+  opacity: 1.0;
+  font-family: "montserrathairline";
+  font-size: 15px;
+}
+.our-clients ul li a:hover {
+  opacity: 0.8;  
+  text-decoration: none;
+}
+
+
+/* Search Jobs in COUNTY */
+.search-jobs {
+  padding: 60px 0px;
+}
+a.search-jobs-button {
+  display: block;
+  margin: 0px auto;
+  border: 2px solid #e87c22;
+  border-radius: 4px;
+  padding: 15px 5px;
+  color: #e87c22;
+  font-family: "montserratregular";
+  font-size: 14px;
+  width: 30%;
+}
+a.search-jobs-button:hover {
+  background-color: #e87c22;
+  color: #fff;
+  text-decoration: none;
+}
+
+
+/* Find Out More */
+.find-out-more {
+  background-color: #5B8DBA;
+  color: #fff;
+  font-family: "montserratlight";
+  padding: 20px 0px;
+}
+.find-out-more h2 {
+  font-family: "montserrathairline";
+  font-size: 42px;
+  margin: 10px 0px 20px 0px;
+}
+.find-out-more ul {
+  list-style-type: none;
+  text-align: center;
+}
+.find-out-more ul li {
+  display: inline;
+  padding-right: 15px;
+  margin-right: 15px;
+  border-right: 1px solid rgba(255,255,255,0.5);
+}
+.find-out-more ul li:last-child {
+  border-right: none;
+}
+.find-out-more ul li a {
+  font-size: 15px;
+  color: #fff;
+  opacity: 1.0;
+  font-family: "montserrathairline";
+}
+.find-out-more ul li a:hover {
+  opacity: 0.8;
+  text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

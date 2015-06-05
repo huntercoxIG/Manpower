@@ -7,7 +7,10 @@ function bst_setup() {
 	update_option('medium_size_w', 470);
 	update_option('large_size_w', 970);
 }
+/* For main Banner */
 add_image_size( 'banner', 1200, 400);
+/* For Staff/Our Team page images */
+add_image_size( 'team', 175, 175, true);
 
 add_action('init', 'bst_setup');
 
