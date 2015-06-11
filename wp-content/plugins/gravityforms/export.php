@@ -425,7 +425,7 @@ class GFExport {
 				mysack.setVar("rg_select_export_form", "<?php echo wp_create_nonce( 'rg_select_export_form' ); ?>");
 				mysack.setVar("form_id", formId);
 				mysack.onError = function () {
-					alert(<?php echo json_encode( esc_html__( 'Ajax error while selecting a form', 'gravityforms' ) ); ?>)
+					alert(<?php echo json_encode( __( 'Ajax error while selecting a form', 'gravityforms' ) ); ?>)
 				};
 				mysack.runAJAX();
 
@@ -456,7 +456,7 @@ class GFExport {
 			jQuery(document).ready(function () {
 				jQuery("#gform_export").submit(function () {
 					if (jQuery(".gform_export_field:checked").length == 0) {
-						alert(<?php echo json_encode( esc_html__( 'Please select the fields to be exported', 'gravityforms' ) );  ?>);
+						alert(<?php echo json_encode( __( 'Please select the fields to be exported', 'gravityforms' ) );  ?>);
 						return false;
 					}
 				});

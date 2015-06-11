@@ -64,11 +64,10 @@
   <div class="container">
     <div class="row">
       <div class="col-xs-10 col-xs-offset-1 site-sub-footer">
-        <ul>
-          <li>Copyright &copy; <?php echo date('Y'); ?> <a href="<?php echo home_url('/'); ?>"><?php bloginfo('name'); ?></a></li>
-          <li><a href="#">Terms &amp; Conditions</a></li>
-          <li><a href="#">Privacy Policy</a></li>
-          <li><a href="#">Manpower.us</a></li>
+          <p class="pull-left">Copyright &copy; <?php echo date('Y'); ?> <a href="<?php echo home_url('/'); ?>"><?php bloginfo('name'); ?></a></li>
+          <p class="pull-right"><a href="#">Terms &amp; Conditions</a></p>
+          <p class="pull-right"><a href="#">Privacy Policy</a></p>
+          <p class="pull-right"><a href="#">Manpower.us</a></p>
         </ul>
       </div>
     </div>

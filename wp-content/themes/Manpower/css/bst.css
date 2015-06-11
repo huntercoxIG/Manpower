@@ -81,6 +81,9 @@ a:hover {
   opacity: 0.9;
 }
 
+.container {
+  overflow: hidden !important;
+}
 
 /* ------------
 
@@ -92,7 +95,6 @@ INCLUDES Styles
   section.banner {
     width: 100%;
     height: 100%;
-    max-height: 400px;
     overflow: hidden;
     position: relative;
   }
@@ -102,9 +104,12 @@ INCLUDES Styles
   }
   section.banner .overlay {
     z-index: 2;
+    width: 100%;
     position: absolute;
-    top: 15%;
-    left: 8%;
+    top: 16%;
+  }
+  section.banner .overlay .center {
+    margin: 0px auto;
   }
   section.banner .overlay h2 {
     color: #F4F8F6;
@@ -113,7 +118,10 @@ INCLUDES Styles
     line-height: 1.6;
     padding-bottom: 30px;
   }
-  section.banner .overlay .col-xs-3 a {
+  section.banner .overlay h2.mobile-overlay {
+    display: none;
+  }
+  section.banner .overlay .col-xs-12 a {
     color: #fff;
     font-family: "montserratlight";
     font-size: 16px;
@@ -126,7 +134,7 @@ INCLUDES Styles
     text-align: center;
     background-color: rgba(255,255,255,0.0);
   }
-  section.banner .overlay .col-xs-3 a:hover {
+  section.banner .overlay .col-xs-12 a:hover {
     text-decoration: none;
     background-color: rgba(255,255,255,0.1);
   }
@@ -145,7 +153,10 @@ INCLUDES Styles
   nav.navbar-default a.navbar-brand img.logo {
     padding-top: 15px;
   }
-
+      /* Mobile logo hide */
+  img.logo-mobile {
+    display: none;
+  }
   /* Top Bar */
   nav.navbar-default .top {
     float: right;
@@ -351,12 +362,12 @@ INCLUDES Styles
     background-color: #383839;
     padding: 15px 0px;
   }
-  footer.site-footer ul {
+  footer.site-footer p {
     list-style-type: none;
     float: right;
     margin-bottom: 0px;
   }
-  footer.site-footer ul li {
+  footer.site-footer p {
     display: inline;
     color: #A1A1A1;
     padding-right: 20px;
@@ -1001,14 +1012,251 @@ a.search-jobs-button:hover {
 
 
 
+/* ------------
+
+MEDIA QUERIES 
+
+-------------- */
 
 
 
+/* 991 */
+@media (max-width: 991px) {
+  .navbar-brand > img.logo {
+    display: none !important;
+  }
+  img.logo-mobile {
+    display: block;
+    padding-top: 15px;
+  }
+  
+  /*---- HEADER ----*/
+  nav.navbar-default {
+    height: 100px;
+    background-color: #fff;
+    border: none;
+  }
+  nav.navbar {
+    margin-bottom: 0px;
+  }
+
+  /* BANNER */
+  section.banner .overlay {
+    z-index: 2;
+    width: 100%;
+    position: absolute;
+    top: 6%;
+  }
+  section.banner .overlay h2.desktop {
+    color: #F4F8F6;
+    font-family: "montserratlight";
+    font-size: 36px;
+    line-height: 1.6;
+    padding-bottom: 10px;
+    margin: 0px 0px;
+  }
+  section.banner .overlay h2.mobile-overlay {
+    display: none;
+  }
+
+  /* Map */
+  section.map .map-wrap .circle-wrap {
+    left: 20%;
+  }
+  section.map .map-wrap .counties-wrap {
+    left: 58%;
+  }
+}
 
 
 
+/* 776 */
+@media (max-width: 776px) {
+  .navbar-header {
+    height: 90px;
+  }
+  /* Navbar Menu Button */
+  .navbar-toggle {
+    margin-top: 5px;
+    margin-right: 5px;
+  }
+  /* HIDE color Manpower symbol*/
+  img.logo-mobile {
+    display: none;
+    padding-top: 15px;
+  }
+  /* SHOW small white Manpower symbol */
+  img.small-symbol {
+    display: block;
+  }
+  /* MOBILE ONLY top bar  */
+  .mobile-top-bar {
+    background-color: #595959;
+    height: 40px;
+  }
+  .mobile-top-bar .container {
+    padding-top: 9px;
+  }
+  .mobile-top-bar a >img {
+    opacity: 1.0;
+    transition: opacity linear 0.2s;
+    -webkit-transition: opacity linear 0.2s;
+  }
+  .mobile-top-bar a:hover > img {
+    opacity: 0.8;
+  }
+  .mobile-top-bar a.pull-right {
+    color: #fff;
+    transition: color linear 0.2s;
+    -webkit-transition: color linear 0.2s;
+    font-size: 16px;
+  }
+  .mobile-top-bar a.pull-right:hover {
+    color: #ccc;
+    text-decoration: none;
+  }
+  
+/* Mobile hide on collapse */
+.navbar-default .hide-on-collapse {
+  position: relative;
+  overflow: visible !important;
+}
+.hide-on-collapse .navbar-collapse {
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  border: none;
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+}
+button.x-toggle {
+  background-color: transparent;
+  border: none;
+  padding-right: 5px;
+}
+button.x-toggle span {
+  color: #595959;
+  padding-right: 10px;
+  font-size: 30px;
+  transition: color linear 0.2s;
+  -webkit-transition: color linear 0.2s;
+}
+.btn-default.active, .btn-default.focus, .btn-default:active, .btn-default:focus, .btn-default:hover, .open>.dropdown-toggle.btn-default {
+  border: none;
+  background-color: transparent;
+}
+.hide-on-collapse .btn-default:hover span {
+  color: #000;
+}
 
 
+  /* Navbar */
+  .navbar-header {
+    height: 90px;
+    background-color: #fff;
+  }
+    /* Menu Icon no border*/
+    .navbar-default .navbar-toggle {
+      border-color: transparent;
+      margin-top: 19px;
+    }
+    .navbar-default .navbar-toggle .icon-bar {
+      background-color: #4f4f4f;
+      transition: background-color linear 0.1s;
+      -webkit-transition: background-color linear 0.1s;
+    }
+    .navbar-toggle .icon-bar {
+      height: 7px;
+      width: 40px;
+    }
+    /* Menu icon hover */
+    .navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
+      background-color: transparent;
+    }
+    .navbar-default .navbar-toggle:focus > .icon-bar, .navbar-default .navbar-toggle:hover > .icon-bar {
+      background-color: #777;
+    }
+    /* Spacing between spans */
+    .navbar-toggle .icon-bar+.icon-bar {
+      margin-top: 6px;
+    }
+
+  /* Mobile logo menu dropdown */
+  .mobile-logo {
+    margin: 0px auto;
+    width: 100%;
+    float: none;
+    background-color: rgba(255,255,255,1.0);
+    padding: 24px 0px;
+  }  
+  .mobile-logo img {
+    padding-left: 10px;
+  }
+
+    /* Navbar-collapse */
+      /* hide TOP section */
+      nav.navbar-default .top {
+        display: none;
+      } 
+      ul.navbar-nav, ul.navbar-right {
+        margin: 0px auto;
+        width: 100%;
+        float: none;
+        background-color: rgba(255,255,255,1.0);
+      }
+      ul.navbar-nav li, ul.navbar-right li {
+        padding: 10px 0px;
+        border-top: 1px solid #777;
+        margin: 0px 10px;
+      }
+      .navbar-nav>li>a {
+        margin: 0px;
+      }
+      .navbar-nav .open .dropdown-menu {
+        padding-bottom: 0px;
+        margin-bottom: -10px;
+      }
+      .navbar-nav .open .dropdown-menu li {
+        padding: 4px 0px;
+      }
+    /* Banner */
+    section.banner img {
+      height: 100%;
+      width: auto;
+    }
+    /* Mobile Overlay Heading*/
+    section.banner .overlay .center h2.desktop {
+      display: none;
+      padding-bottom: 10px;
+    }
+    section.banner .overlay .center h2.mobile-overlay {
+      display: block;
+      font-size: 30px;
+      padding-bottom: 0px;
+      margin-bottom: 0px;
+    }
+    section.banner .overlay .center .col-xs-12 {
+      width: 70%;
+      margin: 10px auto 0px auto;
+      float: none;
+    }
+    /* Three */
+    .three {
+      padding-bottom: 0px;
+    }
+    .three .col-sm-4 {
+      padding-bottom: 50px;
+    }
+    .three .col-sm-4 h3 {
+      font-size: 22px;
+      font-family: "montserratlight";
+    }
+  
+  /* Map */
+
+
+
+}
 
 
 

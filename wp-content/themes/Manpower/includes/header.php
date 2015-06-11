@@ -22,17 +22,27 @@
 <![endif]-->
 
 <nav class="navbar navbar-default navbar-static-top">
-  <div class="container">
-    <div class="navbar-header">
+  <!-- MOBILE ONLY top bar -->
+  <div class="mobile-top-bar visible-xs">
+    <div class="container">
+      <a href="<?php echo home_url('/'); ?>"><img class="pull-left" src="/wp-content/themes/Manpower/img/mp-symbol-logo.png" alt=""></a>
+      <a class="pull-right" href="<?php echo get_page_link(24); ?>" title="E-Connect Portal">E-Connect</a>
+    </div>
+  </div>
 
+  <div class="container hide-on-collapse">  
+    <!-- Navbar -->
+    <div class="navbar-header">
+      <!-- Menu Button -->
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
         <span class="sr-only">Toggle navigation</span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-
-      <a class="navbar-brand" href="<?php echo home_url('/'); ?>"><img class="logo" src="/wp-content/themes/Manpower/img/mp-eci-logo.png" alt="Manpower East Central Indiana logo"></a>
+      
+      <!-- Site Logo -->
+      <a class="navbar-brand" href="<?php echo home_url('/'); ?>"><img class="logo" src="/wp-content/themes/Manpower/img/mp-eci-logo.png" alt="Manpower East Central Indiana logo"><img src="/wp-content/themes/Manpower/img/mp-eci-logo_mobile.png" class="logo-mobile" alt="Manpower logo"> </a>
     </div>
 
     
@@ -49,6 +59,13 @@
           <li><a href="#"><img src="/wp-content/themes/Manpower/img/email-icon.jpg" alt=""></a></li>
           <li><a href="<?php echo get_page_link(24); ?>" title="E-Connect Portal">E-Connect</a></li>
         </ul>
+      </div>
+
+      <div class="mobile-logo visible-xs">
+        <img src="/wp-content/themes/Manpower/img/mp-logo_mobile.png" alt="Manpower logo">
+        <button class="btn-default pull-right x-toggle" type="button" data-toggle="collapse" data-target="#navbar">
+          <span class="glyphicon glyphicon-remove"></span>
+        </button>
       </div>
 
         <?php
