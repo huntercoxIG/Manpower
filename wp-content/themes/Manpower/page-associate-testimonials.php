@@ -64,11 +64,11 @@
     <div class="row">
       <div class="col-xs-10 col-xs-offset-1 narrow">
         <div class="row">
-          <div class="col-sm-5">
+          <div class="col-md-5">
             <h4>Share <br>your story!</h4>
             <p>Tell us a little bit about your experience with Manpower.</p>
           </div>
-          <div class="col-sm-7">
+          <div class="col-md-7">
             <!-- <p>A form will go in this area. It will allow associates to write a testimonial and submit a photo. These will have to be approved before posting and going public.</p> -->
 
             <!-- Share Your Story form (gravity forms shortcode) -->

@@ -59,7 +59,7 @@
 <section class="map">
 	<div class="map-wrap">
 		<div class="circle-wrap">
-			<h3>A Closer Look</h3
+			<h3>A Closer Look</h3>
 			<p>at the counties where we have jobs for you.</p>
 
 			<!-- Circular Map of Indiana + Highlighted counties -->

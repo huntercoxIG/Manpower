@@ -205,7 +205,12 @@ INCLUDES Styles
   }
 
 /*---- NAVIGATION ----*/
-  
+  /* Container=Overflow:hidden OVERWRITE SO THAT DROP DOWN MENUS WILL GO OUTSIDE OF THE PARENT "iv class="container */
+  .navbar-default .container.hide-on-collapse {
+    overflow: visible !important; 
+  }
+
+
   ul.navbar-nav, ul.navbar-right {
     margin-top: 0px;
     float: right;
@@ -270,8 +275,8 @@ INCLUDES Styles
   ul.dropdown-menu {
     border: none;
     box-shadow: none;
-    background-color: rgba(255,255,255,0.7);
-
+    background-color: rgba(255,255,255,0.9);
+    
   }
   ul.dropdown-menu li a {
     text-transform: none;
@@ -412,6 +417,7 @@ FRONT-PAGE template Styles
   section.map {
     background-color: #F4F8F6;
     height: 500px;
+    overflow: hidden;
   }
   section.map .map-wrap {
     position: relative;
@@ -793,7 +799,8 @@ PAGE-testimonials template Styles
 
 .gform_wrapper .gform_footer input.button {
   width: 97.5% !important;
-  background-color: #5B8DBA; 
+  background-color: #5B8DBA;
+  text-transform: uppercase; 
 }
 .gform_wrapper .gform_footer input.button:hover {
   width: 97.5% !important;
@@ -1020,7 +1027,7 @@ MEDIA QUERIES
 
 
 
-/* 991 */
+/* -------------------- 992 ----------------------------*/
 @media (max-width: 991px) {
   .navbar-brand > img.logo {
     display: none !important;
@@ -1066,11 +1073,56 @@ MEDIA QUERIES
   section.map .map-wrap .counties-wrap {
     left: 58%;
   }
+
+  /* Testimonials - Page */
+  .testimonial-row .circle {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    border: 1px solid rgba(0,0,0,0.1);
+    overflow: hidden;
+    margin: 0px auto;
+  }
+  .testimonial-row .circle img {
+    text-align: center;
+    width: 100%;
+    height: 100%;
+  }
+  .testimonial-row.odd p.quote {
+    font-family: "montserratlight";
+    font-size: 16px;
+    color: #777;
+    padding-bottom: 15px;
+    padding-left: 20px;
+    text-align: right;
+  }
+  .testimonial-row.even p.quote {
+    font-family: "montserratlight";
+    font-size: 16px;
+    color: #777;
+    padding-bottom: 15px;
+    padding-right: 20px;
+    text-align: left;
+  }
+
+  /* Share Your Story */
+
+  .share-your-story h4 {
+    padding-left: 0px;
+    padding-top: 0px;
+  }
+  .share-your-story p {
+    padding-left: 0px;
+  }
+
 }
 
 
 
-/* 776 */
+
+
+
+/* -------------------- 776 ---------------------------- */
 @media (max-width: 776px) {
   .navbar-header {
     height: 90px;
@@ -1112,7 +1164,7 @@ MEDIA QUERIES
     font-size: 16px;
   }
   .mobile-top-bar a.pull-right:hover {
-    color: #ccc;
+    color: #6e9082;
     text-decoration: none;
   }
   
@@ -1252,21 +1304,123 @@ button.x-toggle span {
       font-family: "montserratlight";
     }
   
-  /* Map */
+  /* Testimonials - Page */
+  .testimonial-row.odd, .testimonial-row.even {
+    padding: 0px 0px 20px 0px;
+    margin-bottom: 20px;
+  }
+  .testimonial-row.odd p.text-right, .testimonial-row.even p.text-left {
+    text-align: center !important;
+  }
+  .testimonial-row .circle {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    border: 1px solid rgba(0,0,0,0.1);
+    overflow: hidden;
+    margin: 0px auto;
+  }
+  .testimonial-row .circle img {
+    text-align: center;
+    width: 100%;
+    height: 100%;
+  }
+  .testimonial-row.odd p.quote {
+    font-family: "montserratlight";
+    font-size: 16px;
+    color: #777;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    text-align: center;
+  }
+  .testimonial-row.even p.quote {
+    font-family: "montserratlight";
+    font-size: 16px;
+    padding-top: 172px;
+    padding-bottom: 15px;
+    padding-right: 20px;
+    text-align: center;
+  }
+  /* MOBILE '.EVEN' IMAGE MOVE ABOVE TEXT */
+  .testimonial-row.even {
+    position: relative;
+  }
+  .testimonial-row.even  .col-sm-3 {
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    height: auto;
+  }
+  /* Share Your Story */
+  .share-your-story .col-xs-10.narrow {
+    padding-right: 0px;
+  }
+  .share-your-story h4 {
+    padding-left: 0px;
+    padding-top: 0px;
+  }
+  .share-your-story p {
+    padding-left: 0px;
+  }
 
 
+  /* About Page */
+  .about-content h2 {
+  text-align: center;
+  font-family: "montserratlight";
+  color: #e87c22;
+  padding: 20px 0px 20px 0px;
+  }
+  .about-content p {
+    line-height: 1.4;
+    font-family: "montserratlight";
+    color: #777;
+    text-align: center;
+  }
+    /* mpr video */
+  .mpr-vid iframe {
+    width: 100% !important;
+  }
 
 }
 
 
 
 
+/* 600 */
+@media (max-width: 600px) {
+  section.map .map-wrap .circle-wrap {
+    left: 5%;
+  }
+}
 
 
 
 
+/* 480 */
+@media (max-width: 480px) {
+  section.map .map-wrap .circle-wrap img {
+    width: 90%;
+  }
+}
 
 
+
+/* 410 */
+@media (max-width: 410px) {
+  section.map .map-wrap .circle-wrap h3 {
+    text-align: left;
+  }
+  section.map .map-wrap .circle-wrap p {
+    text-align: left;
+    margin: 0px;
+    margin-bottom: 30px;
+  }
+  section.map .map-wrap .circle-wrap img {
+    width: 80%;
+  }
+}
 
 
 
