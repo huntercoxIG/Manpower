@@ -5,7 +5,7 @@
       <div class="row">
 
         <!-- Sitemap / Address -->
-        <div class="col-sm-4">
+        <div class="col-sm-12 col-md-5 col-lg-4">
           <div class="row">
             <div class="col-xs-6">
               <p><strong>Associates</strong></p>
@@ -26,25 +26,26 @@
               </ul>
             </div>
           </div>
+          
+          <div class="row">
             <!-- Manpower Richmond Address -->
-            <div class="richmond-address">
+            <div class="col-xs-6 col-md-12 richmond-address">
               <p><strong>Manpower Richmond</strong></p>
               <p>500 E Main St <br> Richmond, IN 47374</p>
               <p>(765) 966-2664</p>
-
-            </div>
+            </div><!-- /.richmond-address -->
 
             <!-- Manpower Portland Address -->
-            <div class="portland-address">
+            <div class="col-xs-6 col-md-12 portland-address">
               <p><strong>Manpower Portland</strong></p>
               <p>609 N Meridian St <br> Portland, IN 47371</p>
               <p>(270) 726-2888</p>
-
-            </div>
-          </div>
+            </div><!-- /.portland-address -->
+          </div><!-- /.row --> 
+        </div><!-- /.col-sm- -->
 
         <!-- Facebook Feed - MP Richmond/Portland -->
-        <div class="col-sm-8">
+        <div class="col-sm-12 col-md-7 col-lg-8">
           <div class="fb-richmond">
             <?php echo do_shortcode( '[custom-facebook-feed id=ManpowerRichmond num=2 limit=2]' ) ?>
           </div>
@@ -64,10 +65,19 @@
   <div class="container">
     <div class="row">
       <div class="col-xs-10 col-xs-offset-1 site-sub-footer">
-        <p class="pull-left">Copyright &copy; <?php echo date('Y'); ?> <a href="<?php echo home_url('/'); ?>"><?php bloginfo('name'); ?></a>
-        <p class="pull-right"><a href="#">Terms &amp; Conditions</a></p>
-        <p class="pull-right"><a href="#">Privacy Policy</a></p>
-        <p class="pull-right"><a href="#">Manpower.us</a></p>
+        <div class="row">
+
+          <div class="col-sm-12 col-md-6">
+            <p class="copyright">Copyright &copy; <?php echo date('Y'); ?> <a href="<?php echo home_url('/'); ?>"><?php bloginfo('name'); ?></a></p>
+          </div><!-- /. col-sm-12 -->
+          
+          <div class="col-sm-12 col-md-6 sub-footer-links"> 
+            <p><a href="#">Terms &amp; Conditions</a></p>
+            <p><a href="#">Privacy Policy</a></p>
+            <p><a href="#">Manpower.us</a></p>
+          </div><!-- /.sub-footer -->
+
+        </div><!-- /.row -->
       </div>
     </div>
   </div>

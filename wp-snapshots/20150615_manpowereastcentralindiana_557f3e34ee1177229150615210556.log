@@ -1,0 +1,75 @@
+********************************************************************************
+PACKAGE-LOG: 2015-06-15 21:06:09
+NOTICE: Do NOT post to public sites or forums 
+********************************************************************************
+VERSION:	0.5.22
+WORDPRESS:	4.2.2
+PHP INFO:	5.4.19 | SAPI: apache2handler
+SERVER:		Apache 
+PHP TIME LIMIT: (0) no time limit imposed 
+PHP MAX MEMORY: 5000M (40M default) 
+MEMORY STACK: 26.5MB 
+
+********************************************************************************
+DATABASE:
+********************************************************************************
+BUILD MODE:   PHP (query limit - 100)
+MYSQLDUMP:    Not Supported
+MYSQLTIMEOUT: 5000 
+TABLES: total:23 | filtered:0 | create:23 
+FILTERED: [] 
+SQL CREATED: 20150615_manpowereastcentralindiana_557f3e34ee1177229150615210556_database.sql 
+SQL FILE SIZE: 552.28KB 
+SQL FILE TIME: 2015-06-15 21:06:10 
+SQL RUNTIME: 0.13 sec. 
+
+******************************************************************************** 
+ARCHIVE (ZIP): 
+******************************************************************************** 
+ARCHIVE DIR:  /Applications/MAMP/htdocs/Manpower 
+ARCHIVE FILE: 20150615_manpowereastcentralindiana_557f3e34ee1177229150615210556_archive.zip 
+FILTERS: *OFF* 
+DIRS:  not set 
+EXTS:  not set 
+---------------------------------------- 
+COMPRESSING 
+SIZE:	47.4MB 
+STATS:	Dirs 423 | Files 2,337 | Links 0 
+SQL ADDED: 20150615_manpowereastcentralindiana_557f3e34ee1177229150615210556_database.sql 
+ZipArchive Object
+(
+    [status] => 0
+    [statusSys] => 0
+    [numFiles] => 2760
+    [filename] => /Applications/MAMP/htdocs/Manpower/wp-snapshots/tmp/20150615_manpowereastcentralindiana_557f3e34ee1177229150615210556_archive.zip
+    [comment] => 
+)
+ 
+COMPRESSION RESULT: '1' 
+COMPRESSED SIZE: 28.84MB 
+ARCHIVE RUNTIME: 13.93 sec. 
+MEMORY STACK: 27.5MB 
+
+******************************************************************************** 
+MAKE INSTALLER: 
+******************************************************************************** 
+Build Start 
+Build Finished 
+Preping for use 
+Template parsed with new data 
+Complete [/Applications/MAMP/htdocs/Manpower/wp-snapshots/tmp/20150615_manpowereastcentralindiana_557f3e34ee1177229150615210556_installer.php] 
+Added to archive 
+
+******************************************************************************** 
+INTEGRITY CHECKS: 
+******************************************************************************** 
+SQL File: 552.28KB 
+Installer File: 318.02KB 
+Archive File: 28.84MB  
+
+********************************************************************************
+RECORD ID:[1]
+TOTAL PROCESS RUNTIME: 14.96 sec.
+PEAK PHP MEMORY USED: 30MB
+DONE PROCESSING => 20150615_manpowereastcentralindiana 2015-06-15 21:06:24
+ 

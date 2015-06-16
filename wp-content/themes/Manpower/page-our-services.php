@@ -17,12 +17,12 @@
       <div id="content" role="main" class="our-services-content">
           <div class="row">
             <!-- Content -->
-            <div class="col-md-7">
+            <div class="col-sm-7">
               <?php get_template_part('includes/loops/content', 'page'); ?>
             </div>
             
             <!-- Services Summary -->
-            <div class="col-md-5">
+            <div class="col-sm-5">
               <?php 
                 $fields = CFS()->get('featured_services');
 

@@ -52,11 +52,12 @@
             </h2>
             <p><?php echo the_title(); ?> residents <br> who are employed.</p>
           </div>
+
           <div class="col-xs-12 col-sm-4">
             <h2 class="stats">
-              <?php echo CFS()->get('associates_population'); ?>
+              <?php echo CFS()->get('business_population'); ?>
             </h2>
-            <p>of our associates <br> work in <?php echo the_title(); ?>.</p>
+            <p> businesses in<br> <?php echo the_title(); ?>.</p>
           </div>
         </div>
       </div>
@@ -78,10 +79,10 @@
           foreach ($fields as $field) : ?>
 
           <div class="row">
-            <div class="col-xs-4">
+            <div class="col-xs-3">
               <img src="<?php echo $field['associate_image']; ?>" alt="<?php echo $field['associate_name']; ?>">
             </div>
-            <div class="col-xs-8">
+            <div class="col-xs-9">
               <p class="associate-quote">"<?php echo $field['associate_quote']; ?>"</p>
               <p class="associate-name text-right"><?php echo $field['associate_name']; ?></p>
               <p class="associate-title text-right">
@@ -96,8 +97,11 @@
     </div>
   </div>
 
+
+<!-- IF Manpower wants it, the 'Our Clients' loop from the counties pages -->
+
 <!-- Our Clients -->
-<div class="our-clients">
+<!-- <div class="our-clients">
   <div class="container">
     <div class="row">
       <div class="col-xs-10 col-xs-offset-1 narrow">
@@ -120,7 +124,11 @@
       </div>
     </div>
   </div>
-</div>
+</div> -->
+
+
+
+
 
 <!-- Search Jobs Button -->
 <div class="container search-jobs">

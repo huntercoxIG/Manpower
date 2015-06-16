@@ -294,7 +294,7 @@ INCLUDES Styles
 
 
 
- /*---- FOOTER ----*/
+/*---- FOOTER ----*/
   section.footer {
     padding: 60px 0px;
   }
@@ -362,20 +362,17 @@ INCLUDES Styles
     text-transform: uppercase;
   }
 
-  /* Small Footer */
+/* ------ SubFooter */
   footer.site-footer {
     background-color: #383839;
     padding: 15px 0px;
   }
   footer.site-footer p {
-    list-style-type: none;
-    float: right;
-    margin-bottom: 0px;
-  }
-  footer.site-footer p {
-    display: inline;
     color: #A1A1A1;
-    padding-right: 20px;
+  }
+  footer.site-footer p.copyright {
+    font-size: 13px;
+    text-align: left;
   }
   footer.site-footer a {
     opacity: 1.0;
@@ -385,7 +382,14 @@ INCLUDES Styles
     text-decoration: none;
     color: #A1A1A1;
   }
-
+  footer.site-footer .site-sub-footer {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  footer.site-footer .sub-footer-links p {
+    padding-left: 15px;
+    float: right;
+  }
 
 
 
@@ -556,7 +560,7 @@ PAGE- template Styles
     
     /* job-resources */
     .banner.job-resources {
-      background-color: #5B8DBA;
+      background-color: #3E639B;
     }
     .job-resources h2.text-center {
       margin-top: 96px;
@@ -573,7 +577,15 @@ PAGE- template Styles
       color: #fff;
       letter-spacing: 3px;
     }
-
+    /* contact */
+    .banner.contact {
+      background-color: #A13841;
+    }
+    .banner.contact h2.text-center {
+      margin-top: 96px;
+      color: #fff;
+      letter-spacing: 3px;
+    }
 /* ------------
 
 PAGE-about template Styles 
@@ -613,20 +625,20 @@ PAGE-our-services template Styles
   padding: 80px 0px;
 }
 /* Left Column */
-.our-services-content .col-md-7 {
+.our-services-content article {
   border-right: 1px solid rgba(0,0,0,0.1);
 }
-.our-services-content .col-md-7 p {
+.our-services-content article p {
   padding-right: 20px;
 }
-.our-services-content .col-md-7 p:nth-child(1) {
+.our-services-content article p:nth-child(1) {
   font-family: "montserratlight";
   font-size: 24px;
   color: #777;
   padding-top: 20px;
 }
 /* Orange text */
-.our-services-content .col-md-7 p strong {
+.our-services-content article p strong {
   font-family: "montserratlight";
   font-size: 24px;
   color: #e87c22;
@@ -917,9 +929,23 @@ h2.successful-associates-title {
 }
 .successful-associates .slick-slide img {
   margin: 0px auto;
+  width: 85%;
 }
-
-
+.successful-associates .slick-slide .associate-quote {
+  font-size: 24px;
+  color: #777;
+  font-family: "montserrathairline";
+}
+.successful-associates .slick-slide p.associate-name {
+  font-family: "montserratlight";
+  font-size: 20px;
+  color: #777;
+}
+.successful-associates .slick-slide p.associate-title {
+  font-family: "montserratlight";
+  font-size: 18px;
+  color: #999;
+}
 
 /* Our Clients */
 .our-clients {
@@ -1018,14 +1044,188 @@ a.search-jobs-button:hover {
 }
 
 
+/* ------------
+
+PAGE-contact template Styles 
+
+-------------- */
+
+/* Richmond */
+  .contact-richmond {
+    text-align: center;
+    border-right: 1px solid rgba(0,0,0,0.2);
+    padding: 20px 0px;
+    margin: 60px 0px;
+  }
+  .contact-richmond h4{
+    color: #777;
+    text-transform: uppercase;
+    font-size: 28px;
+    font-family: "montserratlight";
+  }
+  .contact-richmond h4 strong {
+    color: #5B8DBA;
+    font-family: "montserratregular";
+  }
+  .contact-richmond p.phone {
+    font-size: 24px;
+    font-family: 'montserratbold';
+    color: #666;
+    padding-top: 10px;
+  }
+  .contact-richmond p.address {
+    font-size: 22px;
+    font-family: "montserratregular";
+    color: #666;
+    padding-top: 10px;
+    line-height: 1.0;
+  }
+  .contact-richmond p.address span {
+    font-size: 28px;
+  }
+/* Portland */
+  .contact-portland {
+    text-align: center;
+    padding: 20px 0px;
+    margin: 60px 0px;
+  }
+  .contact-portland h4{
+    color: #777;
+    text-transform: uppercase;
+    font-size: 28px;
+    font-family: "montserratlight";
+  }
+  .contact-portland h4 strong {
+    color: #e87c22;
+    font-family: "montserratregular";
+  }
+  .contact-portland p.phone {
+    font-size: 24px;
+    font-family: 'montserratbold';
+    color: #666;
+    padding-top: 10px;
+  }
+  .contact-portland p.address {
+    font-size: 22px;
+    font-family: "montserratregular";
+    color: #666;
+    padding-top: 10px;
+    line-height: 1.0;
+  }
+  .contact-portland p.address span {
+    font-size: 28px;
+  }
+
+/* Contact Form (gravity forms) */
+.contact-form {
+  background-color:#f5faf8;
+}
+.contact-form h3.contact-us {
+  font-size: 32px;
+  font-family: "montserratlight";
+  text-align: center;
+  color: #666;
+  padding-top: 20px;
+}
+.contact-content {
+  width: 70%;
+  margin: 0px auto;
+}
+
+
+
+
+
+/* ------------
+
+PAGE-job-resources template Styles 
+
+-------------- */
+#content article {
+  margin-bottom: 10px !important;
+}
+.job-resources-content {
+  padding: 40px 0px 20px 0px;
+}
+.job-resources-content p {
+  line-height: 2;
+  font-family: "montserratlight";
+  color: #777;
+  text-align: center;
+  width: 80%;
+  margin: 0px auto;
+} 
+.job-resources-content p:first-child {
+  padding-bottom: 20px;
+}
+/* Job Statistics */
+.job-statistics {
+  background-color: #f5faf8;
+  padding: 40px 15px 60px 15px;
+}
+.job-statistics h4 {
+  font-size: 28px;
+  color: #666;
+  text-align: center;
+  font-family: "montserratregular";
+  padding-bottom: 20px;
+}
+.job-statistics p.percentage {
+  text-align: center;
+  font-size: 44px;
+  font-family: "montserratregular";
+  padding: 20px 0px 10px 0px;
+  margin-bottom: 0px;
+}
+.job-statistics .stats-1 p.percentage {
+  color: #e87c22;
+}
+.job-statistics .stats-2 p.percentage {
+  color: #3E639B;
+}
+.job-statistics .stats-3 p.percentage {
+  color: #A13841;
+}
+.job-statistics p.description {
+  text-align: center;
+  font-size: 16px;
+  color: #444;
+  width: 65%;
+  margin: 0px auto;
+}
+.job-tips .job-tips-tabs {
+  margin: 0px auto;
+}
+
+
+/* Dos & Donts */
+.dos-donts {
+  background-color: #e87c22;
+  padding: 40px 15px;
+}
+.dos-donts .col-xs-12 h4 {
+  text-align: center;
+  font-size: 24px;
+  color: #fff;
+  text-transform: uppercase;
+}
+.dos-donts .col-xs-12 ul {
+  text-align: center;
+}
+
+
 
 /* ------------
 
 MEDIA QUERIES 
 
 -------------- */
-
-
+/* -------------------- 1200 ----------------------------*/
+@media (max-width: 1200px) { 
+  footer.site-footer .sub-footer-links {
+    font-size: 11px;
+  }
+}  
 
 /* -------------------- 992 ----------------------------*/
 @media (max-width: 991px) {
@@ -1037,7 +1237,7 @@ MEDIA QUERIES
     padding-top: 15px;
   }
   
-  /*---- HEADER ----*/
+/*---- HEADER ----*/
   nav.navbar-default {
     height: 100px;
     background-color: #fff;
@@ -1047,7 +1247,7 @@ MEDIA QUERIES
     margin-bottom: 0px;
   }
 
-  /* BANNER */
+/* BANNER */
   section.banner .overlay {
     z-index: 2;
     width: 100%;
@@ -1066,7 +1266,19 @@ MEDIA QUERIES
     display: none;
   }
 
-  /* Map */
+/* FOOTER */
+  footer.site-footer .site-sub-footer {
+    float: none !important;
+  }
+  footer.site-footer .site-sub-footer p.copyright {
+    text-align: center;
+  }
+  footer.site-footer .sub-footer-links p {
+    float: none !important;
+    display: block;
+  }
+  
+/* Map */
   section.map .map-wrap .circle-wrap {
     left: 20%;
   }
@@ -1074,7 +1286,7 @@ MEDIA QUERIES
     left: 58%;
   }
 
-  /* Testimonials - Page */
+/* Testimonials - Page */
   .testimonial-row .circle {
     width: 160px;
     height: 160px;
@@ -1105,8 +1317,7 @@ MEDIA QUERIES
     text-align: left;
   }
 
-  /* Share Your Story */
-
+/* Share Your Story */
   .share-your-story h4 {
     padding-left: 0px;
     padding-top: 0px;
@@ -1115,6 +1326,37 @@ MEDIA QUERIES
     padding-left: 0px;
   }
 
+
+/* Our Services - Page */
+  /* Left Column */
+  .our-services-content  article {
+    border-right: 1px solid rgba(0,0,0,0.1);
+  }
+  .our-services-content  article p {
+    padding-right: 20px;
+  }
+  .our-services-content  article p:nth-child(1) {
+    font-family: "montserratlight";
+    font-size: 18px;
+    color: #777;
+    padding-top: 20px;
+  }
+  /* Orange text */
+  .our-services-content  article p strong {
+    font-family: "montserratlight";
+    font-size: 18px;
+    color: #e87c22;
+  }
+  /* Right Column */
+  .our-services-content p.side-service:nth-child(1) {
+    padding: 24px 0px 10px 0px;
+    color: #777;
+  }
+
+  .our-services-content p.side-service {
+    padding: 0px 0px 10px 0px;
+    color: #777;
+  }
 }
 
 
@@ -1303,7 +1545,61 @@ button.x-toggle span {
       font-size: 22px;
       font-family: "montserratlight";
     }
-  
+/* FOOTER */
+section.footer ul.site-links {
+  text-align: right;
+}
+section.footer .portland-address {
+  text-align: right;
+}
+
+  /* Our Services - Page */
+  .our-services-content .narrow {
+
+  }
+  .our-services-content {
+    padding: 20px 0px;
+  }
+    /* Left Column */
+  .our-services-content  article {
+    border-right: none;
+  }
+  .our-services-content  article p {
+    padding-right: 20px;
+    text-align: center;
+  }
+  .our-services-content  article p:nth-child(1) {
+    font-family: "montserratlight";
+    font-size: 22px;
+    color: #777;
+    padding-top: 20px;
+  }
+  /* Orange text */
+  .our-services-content  article p strong {
+    font-family: "montserratlight";
+    font-size: 22px;
+    color: #e87c22;
+  }
+
+  /* Right Column */
+  .our-services-content p.side-service:nth-child(1) {
+    padding: 24px 0px 10px 0px;
+    color: #777;
+    border-top: 1px solid rgba(0,0,0,0.1);
+  }
+  .our-services-content p.side-service {
+    padding: 0px 0px 10px 0px;
+    color: #777;
+    text-align: center;
+  }
+  /* Full Service text size */
+  .full-service h4 {
+    font-size: 20px;
+  }
+  .full-service p {
+    font-size: 14px;
+  }
+
   /* Testimonials - Page */
   .testimonial-row.odd, .testimonial-row.even {
     padding: 0px 0px 20px 0px;
