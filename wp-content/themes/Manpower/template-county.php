@@ -66,7 +66,7 @@
 </div>
 
 <!-- Successful Associates -->
-  <div class="container">
+  <div class="container successful-associates">
     <div class="row">
       <div class="col-xs-10 col-xs-offset-1 narrow">
         <h2 class="successful-associates-title">
@@ -128,13 +128,6 @@
 
 
 
-
-
-<!-- Search Jobs Button -->
-<div class="container search-jobs">
-  <a href="<?php get_page_link(24); ?>" class="search-jobs-button text-center">Search <?php echo the_title(); ?> Jobs</a> 
-</div>
-
 <!-- Find Out More -->
 <div class="find-out-more">
   <div class="container">
@@ -160,5 +153,12 @@
     </div>
   </div>
 </div>
+
+
+<!-- Search Jobs Button -->
+<div class="container search-jobs">
+  <a href="<?php get_page_link(24); ?>" class="search-jobs-button text-center">Search <?php echo the_title(); ?> Jobs</a> 
+</div>
+
 
 <?php get_template_part('includes/footer'); ?>

@@ -12,20 +12,32 @@
 
 <div class="container">
   <div class="row">
-
     
     <div class="col-xs-10 col-xs-offset-1 narrow">
-      <div id="content" role="main" class="about-content">
+      <div id="content" role="main" class="downloads-content">
         <?php get_template_part('includes/loops/content', 'page'); ?>
+
+        <?php 
+          $fields = CFS()->get('file_downloads_loop');
+
+          echo '<ul class="downloads-list">';
+
+            foreach ($fields as $field) {
+                echo '<li><span class="glyphicon glyphicon-download"></span>';
+                  echo '<a class="" href="' . $field['file_download'] . '" download>';
+                    echo $field['file_name'];
+                  echo '</a>';  
+                echo '</li>';
+            }
+
+          echo '</ul>';
+        ?>
       </div><!-- /#content -->
     </div>
     
+
   </div><!-- /.row -->
 </div><!-- /.container -->
 
-<!-- <!-- Manpower Richmond video -->
-<div class="container-fluid mpr-vid">
-  <iframe width="1280" height="720" src="https://www.youtube.com/embed/aCmPDi5u3vg" frameborder="0" allowfullscreen></iframe>
-</div> -->
 
 <?php get_template_part('includes/footer'); ?>

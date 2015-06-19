@@ -12,10 +12,9 @@
 
 <div class="container">
   <div class="row">
-
     
     <div class="col-xs-10 col-xs-offset-1 narrow">
-      <div id="content" role="main" class="about-content">
+      <div id="content" role="main" class="clients-content">
         <?php get_template_part('includes/loops/content', 'page'); ?>
       </div><!-- /#content -->
     </div>
@@ -23,9 +22,16 @@
   </div><!-- /.row -->
 </div><!-- /.container -->
 
-<!-- <!-- Manpower Richmond video -->
-<div class="container-fluid mpr-vid">
-  <iframe width="1280" height="720" src="https://www.youtube.com/embed/aCmPDi5u3vg" frameborder="0" allowfullscreen></iframe>
-</div> -->
+
+<!-- Client Sign-up form -->
+<div class="container-fluid clients-form">
+  <div class="row">
+    <div class="col-xs-10 col-xs-offset-1 narrow">   
+      <div class="clients-form-wrap">   
+        <?php echo do_shortcode( '[gravityform id="3" title="false" description="false"]' ) ?>
+      </div><!-- /.clients-form -->
+    </div>
+  </div><!-- /.row -->  
+</div><!-- /.contact-form -->
 
 <?php get_template_part('includes/footer'); ?>

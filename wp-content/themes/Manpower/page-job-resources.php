@@ -24,7 +24,7 @@
 <!-- Hiring Statistics -->
 <div class="container-fluid job-statistics">
   <div class="row">
-    <h4>Employers are looking at you from all angles, especially online.</h4>
+    <h4>Employers are looking at you from all angles.</h4>
     <div class="col-sm-12 col-md-4 stats-1">
       <p class="percentage">48%</p>
       <p class="description">of employers will Google your name</p>
@@ -56,26 +56,26 @@
           <div class="panel panel-default">
             <div class="panel-heading" role="tab" id="headingOne">
               <h4 class="panel-title">
-                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                   #1 - Do your homework.
                 </a>
               </h4>
             </div>
-            <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+            <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
               <div class="panel-body">
                 <div class="row">
                   <div class="col-xs-12 col-sm-6">
                     <ul>
                       <li>Company research</li>
                       <li>Interviewer research
-                        <ul>
+                        <ul class="second">
                           <li>Uncover work history, past jobs, interests, groups, etc.</li>
                           <li>Use Google to search</li>
                           <li>Use LinkedIn</li>
                         </ul>
                       </li>
                       <li>Prepare your interview kit
-                        <ul>
+                        <ul class="second">
                           <li>Extra resumes</li>
                           <li>Pen &amp; paper</li>
                           <li>Work samples</li>
@@ -84,33 +84,37 @@
                         </ul>
                       </li>
                     </ul>
-                  </div><!-- /.col-sm-6 -->                
+                  </div><!-- /.col-sm-6 -->     
+                  
                   <div class="col-xs-12 col-sm-6">
-                    <strong>Company Research Questions</strong>
-                    
                     <ul>
-                      <li>What does the company do?</li>
-                      <li>How successful is the company? Sales? Earnings? Growth?</li>
-                      <li>What is the size of the company? How many employees?</li>
-                      <li>What are the company objectives and goals?</li>
-                      <li>How long has the company been in business?</li>
-                      <li>Who are the main competitors?</li>
-                      <li>Who are the key executives? What are they known for?</li>
-                      <li>Is the company publicly or privately owned?</li>
-                      <li>What is the general reputation of the company?</li>
-                      <li>What are the company’s major achievements?</li>
-                      <li>What are the latest news stories? Press releases?</li>
+                      <li>Company Research Questions
+                        <ul class="second">
+                          <li>What does the company do?</li>
+                          <li>How successful is the company? Sales? Earnings? Growth?</li>
+                          <li>What is the size of the company? How many employees?</li>
+                          <li>What are the company objectives and goals?</li>
+                          <li>How long has the company been in business?</li>
+                          <li>Who are the main competitors?</li>
+                          <li>Who are the key executives? What are they known for?</li>
+                          <li>Is the company publicly or privately owned?</li>
+                          <li>What is the general reputation of the company?</li>
+                          <li>What are the company’s major achievements?</li>
+                          <li>What are the latest news stories? Press releases?</li>
+                        </ul>
+                      </li>
                     </ul>
-                  </div></div>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
+          </div><!-- /.panel -->
           <!-- Tip #2 -->
           <div class="panel panel-default">
             <div class="panel-heading" role="tab" id="headingTwo">
               <h4 class="panel-title">
                 <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                  #2 - Dress Wisely
+                  #2 - Dress wisely.
                 </a>
               </h4>
             </div>
@@ -154,20 +158,23 @@
                        <li>Make sure your phone doesn't make any noise</li>
                        <li>Look people in the eyes</li>
                        <li>Be positive</li>
-                       <li><strong>Keep nerves in check</strong></li>
+                       <li>Keep nerves in check</li>
                      </ul>
                    </div>
                    <div class="col-xs-12 col-sm-6">
-                    <strong>Overcoming Nervousness</strong>
-                      <ul>
-                        <li>Focus on being confident</li>
-                        <li>Take deep breaths</li>
-                        <li>Smile</li>
-                        <li>Think of your accomplishments</li>
-                        <li>Build rapport quickly, shake hands, make eye contact and confidently introduce yourself</li>
-                        <li>Find common ground</li>
-                        <li><strong>Remember, you are interviewing them too!</strong></li>
-                     </ul>
+                    <ul>
+                      <li>Overcoming Nervousness
+                        <ul class="second">
+                          <li>Focus on being confident</li>
+                          <li>Take deep breaths</li>
+                          <li>Smile</li>
+                          <li>Think of your accomplishments</li>
+                          <li>Build rapport quickly, shake hands, make eye contact and confidently introduce yourself</li>
+                          <li>Find common ground</li>
+                          <li>Remember, you are interviewing them too!</li>
+                       </ul>
+                      </li>
+                    </ul>
                    </div>
                  </div> 
               </div>
@@ -191,7 +198,7 @@
                        <li>Behavioral</li>
                        <li>Case - solve a case/brain teaser</li>
                        <li>Weird 
-                         <ul>
+                         <ul class="second">
                            <li>How lucky are you and why?</li>
                            <li>Do you believe in Bigfoot?</li>
                            <li>If you were a box of cereal, what would you be and why?</li>
@@ -203,24 +210,29 @@
                      </ul>
                    </div>
                    <div class="col-xs-12 col-sm-6">
-                    <strong>Overcoming Nervousness</strong>
-                      <ul>
-                        <li>Focus on being confident</li>
-                        <li>Take deep breaths</li>
-                        <li>Smile</li>
-                        <li>Think of your accomplishments</li>
-                        <li>Build rapport quickly, shake hands, make eye contact and confidently introduce yourself</li>
-                        <li>Find common ground</li>
-                        <li><strong>Remember, you are interviewing them too!</strong></li>
-                     </ul>
+                    <ul>
+                      <li>Answering Interview Questions
+                        <ul class="second">
+                          <li>Be honest</li>
+                          <li>Pause for a second before answering</li>
+                          <li>Avoid ums</li>
+                          <li>Make answers relevant</li>
+                          <li>Don't be negative</li>
+                          <li>Give details</li>
+                          <li>No yes/no answers</li>
+                          <li>Talk up transferable skills</li>
+                        </ul>
+                      </li>
+                    </ul>
+                      
                    </div>
                 </div> 
 
                 <!-- Top Interview Questions -->
                 <div class="row">
-                  <h4>Top Interview Questions:</h4>
+                  <h4 class="top-questions-title">Top Interview Questions:</h4>
                   <div class="col-xs-12">
-                    <ul>
+                    <ul class="top-questions">
                       <li>Tell me about yourself.<br>
                         <strong>
                           Focus on why you are qualified – strongest skills, experience, knowledge, relevant accomplishments.
@@ -282,7 +294,7 @@
                    <div class="col-xs-12 col-sm-6">
                      <ul>
                        <li>Tell me about a time when you had to...
-                        <ul>
+                        <ul class="second">
                           <li>Solve a difficult problem</li>
                           <li>Show your leadership skills</li>
                           <li>Come up with a new solution</li>
@@ -297,14 +309,18 @@
                      </ul>
                    </div>
                    <div class="col-xs-12 col-sm-6">
-                    <strong>CAR Story Format</strong>
-                      <ul>
-                        <li>Answers behavioral questions - "Tell me about a time you..."</li>
-                        <li>Break down into a 5-6 sentence story</li>
-                        <li>Challenge/Problem: what was the situation and problem, what neede to be done</li>
-                        <li>Action: steps/skills/tactics used</li>
-                        <li>Results: explain how your actions impacted end product, what were the results</li>
-                      </ul>
+                   <ul>
+                      <li>CAR Story Format
+                        <ul class="second">
+                          <li>Answers behavioral questions - "Tell me about a time you..."</li>
+                          <li>Break down into a 5-6 sentence story</li>
+                          <li>Challenge/Problem: what was the situation and problem, what neede to be done</li>
+                          <li>Action: steps/skills/tactics used</li>
+                          <li>Results: explain how your actions impacted end product, what were the results</li>
+                        </ul>
+                      </li>
+                   </ul>
+                      
                    </div>
                 </div> 
 
@@ -468,7 +484,7 @@
     <div class="col-xs-10 col-xs-offset-1 narrow">
       <div class="row">
         <div class="col-xs-12 col-sm-6">
-          <h4>Interview Dos</h4>
+          <h4>Interview <span class="dos">Dos</span></h4>
           <ul>
             <li>Thoroughly research the company</li>
             <li>Answer questions with results and data</li>
@@ -482,7 +498,7 @@
           </ul>
         </div>
         <div class="col-xs-12 col-sm-6">
-          <h4>Interivew Don'ts</h4>
+          <h4>Interview <span class="donts">Don'ts</span></h4>
           <ul>
             <li>Dress unprofessionally</li>
             <li>Fidget</li>
@@ -490,7 +506,6 @@
             <li>Contradict yourself</li>
             <li>Speak negatively of past employers</li>
             <li>Answer your cell phone</li>
-            <li>Lie</li>
             <li>Get too casual</li>
             <li>Assume you got the job</li>
             <li>Talk salary, until you get the offer</li>

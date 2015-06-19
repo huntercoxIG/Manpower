@@ -72,9 +72,9 @@
           </div><!-- /. col-sm-12 -->
           
           <div class="col-sm-12 col-md-6 sub-footer-links"> 
-            <p><a href="#">Terms &amp; Conditions</a></p>
-            <p><a href="#">Privacy Policy</a></p>
-            <p><a href="#">Manpower.us</a></p>
+            <p><a href="<?php echo get_permalink( 127 ); ?>">Terms &amp; Conditions</a></p>
+            <p><a href="<?php echo get_permalink( 125 ); ?>">Privacy Policy</a></p>
+            <p><a href="http://www.manpower.us/en/Index.htm">Manpower.us</a></p>
           </div><!-- /.sub-footer -->
 
         </div><!-- /.row -->
