@@ -9,7 +9,8 @@
 
 	<!-- Montserrat - google Font -->
 	<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
-
+  <!-- Embed.ly -->
+  <link rel="stylesheet" href="http://api.embed.ly/1/oembed?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DaCmPDi5u3vg&maxwidth=500">
 
 </head>
 
@@ -30,7 +31,7 @@
     </div>
   </div>
 
-  <div class="container hide-on-collapse">  
+  <div class="container hide-on-collapse">
     <!-- Navbar -->
     <div class="navbar-header">
       <!-- Menu Button -->
@@ -40,12 +41,21 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      
+
       <!-- Site Logo -->
-      <a class="navbar-brand" href="<?php echo home_url('/'); ?>"><img class="logo" src="/wp-content/themes/Manpower/img/mp-eci-logo.png" alt="Manpower East Central Indiana logo"><img src="/wp-content/themes/Manpower/img/mp-eci-logo_mobile.png" class="logo-mobile" alt="Manpower logo"> </a>
+				<a class="navbar-brand" href="<?php echo home_url('/'); ?>">
+	        <img id="mp-logo" src="/wp-content/themes/Manpower/img/mp-eci-logo-blank.png" alt="Javascript Logo"><img src="/wp-content/themes/Manpower/img/mp-eci-logo_mobile.png" class="logo-mobile" alt="Manpower logo">
+
+	        <div>
+						<span id="eci" class="mp-logo-text">East Central Indiana</span>
+	          <span class="mp-logo-text">Richmond</span>
+	          <span class="mp-logo-text">Portland</span>
+	        </div>
+				</a>
+      <!-- <a class="navbar-brand" href="<?php echo home_url('/'); ?>"><img class="logo" src="/wp-content/themes/Manpower/img/mp-eci-logo.png" alt="Manpower East Central Indiana logo"><img src="/wp-content/themes/Manpower/img/mp-eci-logo_mobile.png" class="logo-mobile" alt="Manpower logo"> </a> -->
     </div>
 
-    
+
 
     <!-- Main Navigation -->
     <div class="collapse navbar-collapse" id="navbar">
@@ -77,15 +87,17 @@
             'walker'            => new wp_bootstrap_navwalker())
           );
         ?>
+        <?php get_template_part('includes/navbar-search'); ?>
+
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container -->
 </nav>
-  
+
 <!--
 Site Title
 ==========
-If you are displaying your site title in the "brand" link in the Bootstrap navbar, 
-then you probably don't require a site title. Alternatively you can use the example below. 
+If you are displaying your site title in the "brand" link in the Bootstrap navbar,
+then you probably don't require a site title. Alternatively you can use the example below.
 See also the accompanying CSS example in css/bst.css .
 
 <div class="container">

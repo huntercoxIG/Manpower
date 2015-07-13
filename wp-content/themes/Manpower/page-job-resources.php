@@ -1,6 +1,6 @@
 <?php get_template_part('includes/header'); ?>
 
-<div class="container-fluid banner <?php 
+<div class="container-fluid banner <?php
   /* uses the post id to get the page slug and echos in class name for dynamic banner css on a per page basis */
   $post_id = get_the_ID();
 
@@ -39,7 +39,6 @@
     </div>
   </div>
 </div>
-
 
 
 
@@ -84,8 +83,8 @@
                         </ul>
                       </li>
                     </ul>
-                  </div><!-- /.col-sm-6 -->     
-                  
+                  </div><!-- /.col-sm-6 -->
+
                   <div class="col-xs-12 col-sm-6">
                     <ul>
                       <li>Company Research Questions
@@ -120,7 +119,7 @@
             </div>
             <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
               <div class="panel-body">
-                
+
                 <div class="row">
                   <div class="col-xs-12">
                     <ul>
@@ -176,7 +175,7 @@
                       </li>
                     </ul>
                    </div>
-                 </div> 
+                 </div>
               </div>
             </div>
           </div>
@@ -197,7 +196,7 @@
                        <li>Tradtional</li>
                        <li>Behavioral</li>
                        <li>Case - solve a case/brain teaser</li>
-                       <li>Weird 
+                       <li>Weird
                          <ul class="second">
                            <li>How lucky are you and why?</li>
                            <li>Do you believe in Bigfoot?</li>
@@ -224,9 +223,9 @@
                         </ul>
                       </li>
                     </ul>
-                      
+
                    </div>
-                </div> 
+                </div>
 
                 <!-- Top Interview Questions -->
                 <div class="row">
@@ -320,9 +319,9 @@
                         </ul>
                       </li>
                    </ul>
-                      
+
                    </div>
-                </div> 
+                </div>
 
               </div>
             </div>
@@ -350,7 +349,7 @@
                        <li>What do you want to be known for</li>
                      </ul>
                    </div>
-                </div> 
+                </div>
 
               </div>
             </div>
@@ -379,7 +378,7 @@
                        <li>Interview them</li>
                      </ul>
                    </div>
-                </div> 
+                </div>
 
               </div>
             </div>
@@ -408,7 +407,7 @@
                        <li>What are the next steps? When do you plan to make a decision?</li>
                      </ul>
                    </div>
-                </div> 
+                </div>
 
               </div>
             </div>
@@ -438,21 +437,21 @@
                        <li>Keep it short</li>
                      </ul>
                    </div>
-                </div> 
+                </div>
 
               </div>
             </div>
           </div>
           <!-- Tip #10 -->
           <div class="panel panel-default">
-            <div class="panel-heading" role="tab" id="headingNine">
+            <div class="panel-heading" role="tab" id="headingTen">
               <h4 class="panel-title">
-                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
+                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTen" aria-expanded="false" aria-controls="collapseNine">
                   #10 - Practice.
                 </a>
               </h4>
             </div>
-            <div id="collapseNine" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingNine">
+            <div id="collapseTen" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTen">
               <div class="panel-body">
                 <div class="row">
                    <div class="col-xs-12">
@@ -466,7 +465,7 @@
                        <li>Get comfortable with your answers</li>
                      </ul>
                    </div>
-                </div> 
+                </div>
 
               </div>
             </div>
@@ -512,7 +511,7 @@
           </ul>
         </div>
       </div><!-- /.row -->
-    </div><!-- /.narrow --> 
-  </div><!-- /.row --> 
+    </div><!-- /.narrow -->
+  </div><!-- /.row -->
 </div><!-- /.dos-donts -->
 <?php get_template_part('includes/footer'); ?>

@@ -1,5 +1,5 @@
 <?php get_template_part('includes/header'); ?>
-<div class="container-fluid banner <?php 
+<div class="container-fluid banner <?php
   /* uses the post id to get the page slug and echos in class name for dynamic banner css on a per page basis */
   $post_id = get_the_ID();
 
@@ -13,16 +13,18 @@
 <div class="container">
   <div class="row">
 
-    <div class="col-xs-12 col-sm-8">
-      <div id="content" role="main">
-        <?php get_template_part('includes/loops/content', 'page'); ?>
-      </div><!-- /#content -->
+    <div class="col-xs-10 col-xs-offset-1 narrow">
+      <!-- <div class="mp-logo-wrap">
+
+        <img id="mp-logo" src="/wp-content/themes/Manpower/img/mp-eci-logo-blank.png" alt="Javascript Logo" />
+
+        <div>
+          <span class="mp-logo-text">Richmond</span>
+          <span class="mp-logo-text">Portland</span>
+        </div>
+      </div> -->
+
     </div>
-    
-    <div class="col-xs-6 col-sm-4" id="sidebar" role="navigation">
-      <?php get_template_part('includes/sidebar'); ?>
-    </div>
-    
   </div><!-- /.row -->
 </div><!-- /.container -->
 

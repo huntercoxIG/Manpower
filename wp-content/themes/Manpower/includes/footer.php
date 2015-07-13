@@ -47,10 +47,10 @@
         <!-- Facebook Feed - MP Richmond/Portland -->
         <div class="col-sm-12 col-md-7 col-lg-8">
           <div class="fb-richmond">
-            <?php echo do_shortcode( '[custom-facebook-feed id=ManpowerRichmond num=2 limit=2]' ) ?>
+            <?php echo do_shortcode('[custom-facebook-feed id=ManpowerRichmond num=2 limit=2]') ?>
           </div>
 
-          <div class="fb-portland">
+           <div class="fb-portland">
             <?php echo do_shortcode( '[custom-facebook-feed id=ManpowerPortlandIN num=2 limit=2]' ) ?>
           </div>
             

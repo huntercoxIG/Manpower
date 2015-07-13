@@ -1,4 +1,4 @@
-/* Manpower Stylesheet
+``/* Manpower Stylesheet
 
 
 /* font-family: '  montserratbold '; */
@@ -91,7 +91,7 @@ a:hover {
 
 /* ------------
 
-INCLUDES Styles 
+INCLUDES Styles
 
 -------------- */
 
@@ -143,6 +143,7 @@ INCLUDES Styles
     background-color: rgba(255,255,255,0.1);
   }
 
+
 /*---- HEADER ----*/
   nav.navbar-default {
     height: 110px;
@@ -151,7 +152,7 @@ INCLUDES Styles
   }
   /* Brand */
   nav.navbar-default a.navbar-brand {
-    height: auto;
+    padding-top: 40px;
     padding-left: 60px;
   }
   nav.navbar-default a.navbar-brand img.logo {
@@ -176,14 +177,10 @@ INCLUDES Styles
   nav.navbar-default .top ul > li.top-phone {
     line-height: 2px;
   }
-  nav.navbar-default .top ul > li.top-phone > img {
-    
-  }
   nav.navbar-default .top ul > li.top-phone p {
     padding-top: 20px;
     display: inline-block;
   }
-
   nav.navbar-default .top ul > li > a >img {
     opacity: 1.0;
   }
@@ -211,15 +208,14 @@ INCLUDES Styles
 /*---- NAVIGATION ----*/
   /* Container=Overflow:hidden OVERWRITE SO THAT DROP DOWN MENUS WILL GO OUTSIDE OF THE PARENT "iv class="container */
   .navbar-default .container.hide-on-collapse {
-    overflow: visible !important; 
+    overflow: visible !important;
   }
-
-
   ul.navbar-nav, ul.navbar-right {
     margin-top: 0px;
-    float: right;
+    float: left !important;
+    padding-left: 245px;
   }
-  
+
   .navbar-nav>li>a {
     padding: 0px !important;
     margin: 15px;
@@ -258,9 +254,7 @@ INCLUDES Styles
     color: #e87c22;
   }
 
-
-
-    /* clear float */
+/* clear float */
   .menu-main-nav-container {
     clear: right;
   }
@@ -275,12 +269,11 @@ INCLUDES Styles
   nav.navbar-default ul.navbar-nav>li>a:hover {
     color: #e87c22;
   }
-  /* dropdown menus */
+/* dropdown menus */
   ul.dropdown-menu {
     border: none;
     box-shadow: none;
     background-color: rgba(255,255,255,0.9);
-    
   }
   ul.dropdown-menu li a {
     text-transform: none;
@@ -290,13 +283,67 @@ INCLUDES Styles
     background-color: transparent;
     color: #5B8DBA;
   }
-  /* Search */
-  form.navbar-form .form-group {
-    display: none;
+
+/* Search */
+  .navbar-form {
+    position: relative;
   }
-
-
-
+  .navbar-form button.btn {
+    color: #666;
+    background-color: transparent;
+    border: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+  .navbar-form .collapse.in {
+    position: absolute;
+    top: 30px;
+    right: 14px;
+    opacity: 0.9;
+  }
+  .navbar-form .collapsing {
+    position: absolute;
+    top: 30px;
+    right: 14px;
+  }
+  .navbar-form .collapsing .search-wrap, .navbar-form .collapse .search-wrap {
+    position: relative;
+  }
+  .navbar-form input.form-control {
+    font-size: 12px;
+    font-family: "montserratlight";
+    width: 240px;
+  }
+  .navbar-form input.form-control:focus, .navbar-form .search-wrap button:focus {
+    border-color: transparent;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    outline: none;
+  }
+  .navbar-form .collapsing .search-wrap button, .navbar-form .collapse .search-wrap button {
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    height: 32px;
+    background-color: #ddd;
+    color: #666;
+    font-size: 10px;
+    padding: auto 5px;
+    text-transform: uppercase;
+    border: none;
+    border-left: 1px solid #ccc;
+    border-bottom-right-radius: 3px;
+    border-top-right-radius: 3px;
+  }
+  .navbar-form .collapse .search-wrap button:hover, .navbar-form .collapsing .search-wrap button:hover {
+    background-color: #eee;
+    border-left: 1px solid #ccc;
+    border-bottom-right-radius: 3px;
+    border-top-right-radius: 3px;
+  }
+  .navbar-form .collapse .search-wrap button.clicked:hover {
+    background-color: #575757 !important;
+  }
 
 /*---- FOOTER ----*/
   section.footer {
@@ -352,7 +399,7 @@ INCLUDES Styles
   .richmond-address p strong {
     color: #383839;
     font-size: 14px;
-    text-transform: uppercase; 
+    text-transform: uppercase;
   }
   .portland-address p {
     width: 100%;
@@ -400,7 +447,7 @@ INCLUDES Styles
 
 /* ------------
 
-FRONT-PAGE template Styles 
+FRONT-PAGE template Styles
 
 -------------- */
 
@@ -413,7 +460,7 @@ FRONT-PAGE template Styles
   }
   .three h3 {
     text-transform: uppercase;
-    color: #404040; 
+    color: #404040;
   }
   .three p {
     width: 60%;
@@ -430,17 +477,13 @@ FRONT-PAGE template Styles
   section.map .map-wrap {
     position: relative;
   }
-  section.map .circle-wrap {
-    position: absolute;
-    left: 29%;
-    top: 44px;
-  }
-  section.map .circle-wrap h3 {
+  section.map h3 {
     color: #404040;
     text-transform: uppercase;
     text-align: center;
+    padding-top: 15px;
   }
-  section.map .circle-wrap p {
+  section.map p {
     color: #707070;
     text-transform: lowercase;
     text-align: center;
@@ -449,90 +492,125 @@ FRONT-PAGE template Styles
     margin-bottom: 20px;
     display: block;
   }
+  section.map .circle-wrap {
+    position: absolute;
+    left: 20%;
+    top: 140px;
+    opacity: 1.0;
+    transition: opacity ease-in-out 0.3s;
+    -webkit-transition: opacity ease-in-out 0.3s;
+    -moz-transition: opacity ease-in-out 0.3s;
+  }
+  section.map .circle-wrap.hov {
+    opacity: 0.6;
+  }
 
   /*---- COUNTIES ----*/
   section.map .counties-wrap {
     position: absolute;
-    left: 51%;
+    left: 45%;
+    top: 120px;
     width: 220px;
     height: 400px;
   }
   section.map .counties-wrap .counties {
     position: relative;
-    margin-top: 100px;
   }
-  section.map .counties-wrap .counties a.county-shapes  {
+  section.map .counties-wrap .counties .county-shapes  {
     position: absolute;
     display: block;
     opacity: 1.0;
+    transition: opacity ease-in-out 0.3s;
+    -webkit-transition: opacity ease-in-out 0.3s;
+    -moz-transition: opacity ease-in-out 0.3s;
   }
 
-  section.map .counties-wrap .counties a.county-shapes img {
-    width: 98%;
-    transition: width linear 80ms;
-    -webkit-transition: width linear 80ms;
-  }
-  /* county-shapes hover */
-  section.map .counties-wrap .counties a.county-shapes:hover img {
-    width: 100%;
+  section.map .counties-wrap .counties .county-shapes img {
+    width: 100;
   }
 /* ---- INDIVIDUAL COUNTY SHAPES/BUTTONS ---- */
   /* blackford county */
-  section.map .counties-wrap .counties a.county-shapes:nth-child(1){
+  section.map .counties-wrap .counties .county-shapes:nth-child(1){
     top: 0;
     left: 0;
     z-index: 2;
   }
   /* jay county */
-  section.map .counties-wrap .counties a.county-shapes:nth-child(2) {
+  section.map .counties-wrap .counties .county-shapes:nth-child(2) {
     top: -3px;
-    left: 54px;
+    left: 56px;
     z-index: 3;
   }
   /* randolph county */
-  section.map .counties-wrap .counties a.county-shapes:nth-child(3) {
-    top: 78px;
-    left: 54px;
+  section.map .counties-wrap .counties .county-shapes:nth-child(3) {
+    top: 81px;
+    left: 55px;
     z-index: 4;
   }
   /* wayne county */
-  section.map .counties-wrap .counties a.county-shapes:nth-child(4) {
-    top: 174px;
+  section.map .counties-wrap .counties .county-shapes:nth-child(4) {
+    top: 179px;
     left: 55px;
     z-index: 5;
   }
   /* henry county */
-  section.map .counties-wrap .counties a.county-shapes:nth-child(5) {
-    top: 153px;
-    left: -36px;
+  section.map .counties-wrap .counties .county-shapes:nth-child(5) {
+    top: 157px;
+    left: -38px;
     z-index: 6;
   }
   /* fayette county */
-  section.map .counties-wrap .counties a.county-shapes:nth-child(6) {
-    top: 244px;
-    left: 36px;
+  section.map .counties-wrap .counties .county-shapes:nth-child(6) {
+    top: 250px;
+    left: 35px;
     z-index: 7;
   }
   /* union county */
-  section.map .counties-wrap .counties a.county-shapes:nth-child(7) {
-    top: 262px;
-    left: 101px;
+  section.map .counties-wrap .counties .county-shapes:nth-child(7) {
+    top: 268px;
+    left: 102px;
     z-index: 8;
   }
-
-
+  section.map .counties-wrap .counties .county-shapes.hov {
+    opacity: 0.4;
+    transition: opacity ease-in-out 0.3s;
+    -webkit-transition: opacity ease-in-out 0.3s;
+    -moz-transition: opacity ease-in-out 0.3s;
+  }
+  section.map .cities-list {
+    position: absolute;
+    left: 62%;
+    top: 140px;
+  }
+  section.map .cities-list ul {
+    text-align: center;
+    list-style-type: none;
+    padding-left: 0px !important;
+    -webkit-column-count: 2; 
+    -webkit-column-gap: 10px; 
+    -moz-column-count: 2; 
+    -moz-column-gap: 10px; 
+    -o-column-count: 2; 
+    -o-column-gap: 10px; 
+    column-count: 2; 
+    column-gap: 10px; 
+  }
+  section.map .cities-list ul li {
+    font-size: 12px;
+  }
 
 
 
 /* ------------
 
-PAGE- template Styles 
+PAGE- template Styles
 
 -------------- */
 
   /* Page Title Banners */
   .banner {
     height: 230px;
+    overflow: hidden;
   }
     /* e-connect & about */
     .banner.e-connect, .banner.about {
@@ -561,7 +639,7 @@ PAGE- template Styles
       color: #fff;
       letter-spacing: 3px;
     }
-    
+
     /* job-resources */
     .banner.job-resources {
       background-color: #3E639B;
@@ -571,7 +649,7 @@ PAGE- template Styles
       color: #fff;
       letter-spacing: 3px;
     }
-    
+
     /* staff/team */
     .banner.our-team {
       background-color: #69aac4;
@@ -635,12 +713,30 @@ PAGE- template Styles
       color: #fff;
       letter-spacing: 3px;
     }
+    /* privacy-policy */
+    .banner.page404 {
+      background-color: #A13841;
+    }
+    .banner.page404 h2.text-center {
+      margin-top: 96px;
+      color: #fff;
+      letter-spacing: 3px;
+    }
+    /* search results */
+    .banner.search {
+      background-color: #666;
+    }
+    .banner.search h2.text-center {
+      margin-top: 96px;
+      color: #fff;
+      letter-spacing: 3px;
+    }
 
 
 
 /* ------------
 
-PAGE-about template Styles 
+PAGE-about template Styles
 
 -------------- */
 .about-content {
@@ -661,16 +757,36 @@ PAGE-about template Styles
 }
 
 /* mpr video */
-.mpr-vid iframe {
-  width: 100% !important;
+.mpr-vid {
+  position: relative;
+  overflow: hidden;
 }
-
-
+.mpr-vid iframe {
+  max-width: 100%;
+  max-height: 100%;
+  border-width: 0;
+  width: 100%;
+  height: 100%;
+}
+.embed-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+}
+.embed-container iframe, .embed-container object, .embed-container embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
 
 
 /* ------------
 
-PAGE-our-services template Styles 
+PAGE-our-services template Styles
 
 -------------- */
 .narrow {
@@ -751,7 +867,7 @@ PAGE-our-services template Styles
 
 /* ------------
 
-PAGE-testimonials template Styles 
+PAGE-testimonials template Styles
 
 -------------- */
 
@@ -836,7 +952,6 @@ PAGE-testimonials template Styles
   padding-top: 20px;
   padding-left: 40px;
 }
-
 .share-your-story .gform_wrapper {
   margin: 0px;
 }
@@ -859,15 +974,13 @@ PAGE-testimonials template Styles
   float: left;
   width: 50%;
 }
-
 .gform_wrapper .top_label input.medium {
   width: 90% !important;
 }
-
 .gform_wrapper .gform_footer input.button {
   width: 97.5% !important;
   background-color: #5B8DBA;
-  text-transform: uppercase; 
+  text-transform: uppercase;
 }
 .gform_wrapper .gform_footer input.button:hover {
   width: 97.5% !important;
@@ -881,7 +994,7 @@ PAGE-testimonials template Styles
 
 /* ------------
 
-PAGE-our-team template Styles 
+PAGE-our-team template Styles
 
 -------------- */
 
@@ -893,45 +1006,57 @@ PAGE-our-team template Styles
 .our-team .member-block {
   padding-top: 30px;
 }
-.our-team .member-block img.team-pic {
-  border: 1px solid rgba(0,0,0,0.1);
-}
 .our-team .member-block .member-name {
   color: #e87c22;
   font-size: 20px;
   font-family: "montserratlight";
-  margin: 10px 0px 0 0;
+  margin: 6px 0px 0px 0px;
 }
 .our-team .member-block .member-title {
   color: #777;
   font-size: 17px;
   font-family: "montserratlight";
+  margin-bottom: 0px;
 }
 .our-team .member-block button.btn {
   background-color: transparent;
-  border: none;
+  border: 1px solid #e87c22;
+  width: 100%;
   color: #666;
   font-family: "montserratregular";
   text-transform: uppercase;
   font-size: 16px;
-  padding: 0px;
+  padding: 5px;
 }
 .our-team .member-block button.btn:hover {
-  color: #333;
+  color: #e87c22;
 }
 .our-team .member-block .bio-overlay {
   z-index: 3;
   position: absolute;
 }
 .our-team .member-block .bio-overlay .well {
-  font-size: 10px;
+  font-size: 11px;
   font-family: "montserratlight";
-  color: #666;
-  background-color: rgba(255,255,255,0.8);
+  background-color: rgba(255,255,255,0.9);
+  padding: 10px 5px 0px 10px;
+  width: 218px;
 }
 .our-team .member-block .bio-overlay .well p {
   text-transform: none;
+  color: #e87c22;
 }
+.our-team .member-block p.member-bio {
+  font-size: 11px;
+  font-family: "montserratlight";
+  background-color: rgba(255,255,255,0.9);
+  padding-top: 6px;
+  margin-top: 6px;
+  text-transform: none;
+  color: #666;
+  border-top: 1px solid #e87c22;
+}
+
 
 /* group image */
 .group-picture {
@@ -952,15 +1077,12 @@ PAGE-our-team template Styles
 
 /* ------------
 
-Counties template Styles 
+Counties template Styles
 
 -------------- */
 
 
 /* County Banner */
-.banner {
-  overflow: hidden;
-}
 .banner img.county-banner {
   width: 100%;
 }
@@ -1076,7 +1198,7 @@ h2.successful-associates-title {
   font-size: 15px;
 }
 .our-clients ul li a:hover {
-  opacity: 0.8;  
+  opacity: 0.8;
   text-decoration: none;
 }
 
@@ -1142,7 +1264,7 @@ a.search-jobs-button:hover {
 
 /* ------------
 
-PAGE-contact template Styles 
+PAGE-contact template Styles
 
 -------------- */
 
@@ -1165,7 +1287,7 @@ PAGE-contact template Styles
   }
   .contact-richmond p.phone {
     font-size: 24px;
-    font-family: 'montserratbold';
+    font-family: "montserratregular";
     color: #666;
     padding-top: 10px;
   }
@@ -1197,7 +1319,7 @@ PAGE-contact template Styles
   }
   .contact-portland p.phone {
     font-size: 24px;
-    font-family: 'montserratbold';
+    font-family: "montserratregular";
     color: #666;
     padding-top: 10px;
   }
@@ -1234,7 +1356,7 @@ PAGE-contact template Styles
 
 /* ------------
 
-PAGE-job-resources template Styles 
+PAGE-job-resources template Styles
 
 -------------- */
 
@@ -1242,7 +1364,7 @@ PAGE-job-resources template Styles
   margin-bottom: 10px !important;
 }
 .job-resources-content {
-  padding: 40px 0px 20px 0px;
+  padding: 40px 0px 50px 0px;
 }
 .job-resources-content p {
   line-height: 2;
@@ -1251,7 +1373,7 @@ PAGE-job-resources template Styles
   text-align: center;
   width: 80%;
   margin: 0px auto;
-} 
+}
 .job-resources-content p:first-child {
   padding-bottom: 20px;
 }
@@ -1302,7 +1424,14 @@ PAGE-job-resources template Styles
   text-align: center;
   font-family: "montserratlight";
   padding: 40px 0px 20px 0px;
-}v
+}
+.job-tips .job-tips-tabs .panel-heading h4.panel-title {
+  text-align: left;
+  padding:0px 0 24px 0;
+  margin: auto;
+  font-size: 24px;
+  border-bottom: 1px solid #e87c22;
+}
 .job-tips .job-tips-tabs .panel-group {
   border-top: none !important;
   border-bottom: none !important;
@@ -1318,7 +1447,9 @@ PAGE-job-resources template Styles
 .job-tips .job-tips-tabs .panel-group .panel:last-child {
   border-bottom: 0px;
 }
-
+.job-tips .job-tips-tabs .panel-heading {
+  background-color: transparent;
+}
 
 
 /* Open Panel (collapsed panel) */
@@ -1390,7 +1521,7 @@ PAGE-job-resources template Styles
 
 /* ------------
 
-PAGE-clients template Styles 
+PAGE-clients template Styles
 
 -------------- */
 /* Clients form */
@@ -1418,12 +1549,9 @@ PAGE-clients template Styles
   margin: 0px auto;
 }
 
-
-
-
 /* ------------
 
-PAGE-downloads template Styles 
+PAGE-downloads template Styles
 
 -------------- */
 .downloads-content h2 {
@@ -1471,12 +1599,9 @@ PAGE-downloads template Styles
 }
 
 
-
-
-
 /* ------------
 
-PAGE-terms-conditions template Styles 
+PAGE-terms-conditions template Styles
 
 -------------- */
 .terms-content {
@@ -1495,7 +1620,7 @@ PAGE-terms-conditions template Styles
   text-align: center;
   width: 80%;
   margin: 0px auto;
-} 
+}
 .summary h4 {
    font-size: 32px;
   font-family: "montserratlight";
@@ -1570,14 +1695,14 @@ PAGE-terms-conditions template Styles
 .terms-tabs .panel-heading h4.panel-title a.collapsed:after {
   content: " +";
   float: right;
-  font-size: 40px; 
+  font-size: 40px;
   font-family: "montserratbold";
 }
 /* "-" Minus symbol for Hide/Show */
 .terms-tabs .panel-heading h4.panel-title a:after {
   content: " -";
   float: right;
-  font-size: 48px; 
+  font-size: 48px;
   font-family: "montserratbold";
   line-height: 0.7;
 }
@@ -1586,15 +1711,9 @@ PAGE-terms-conditions template Styles
   color: #e87c22;
 }
 
-
-
-
-
-
-
 /* ------------
 
-PAGE-privacy-policy template Styles 
+PAGE-privacy-policy template Styles
 
 -------------- */
 .privacy-content h2 {
@@ -1638,14 +1757,14 @@ PAGE-privacy-policy template Styles
 .privacy-tabs .panel-heading h4.panel-title a.collapsed:after {
   content: " +";
   float: right;
-  font-size: 40px; 
+  font-size: 40px;
   font-family: "montserratbold";
 }
 /* "-" Minus symbol for Hide/Show */
 .privacy-tabs .panel-heading h4.panel-title a:after {
   content: " -";
   float: right;
-  font-size: 48px; 
+  font-size: 48px;
   font-family: "montserratbold";
   line-height: 0.7;
 }
@@ -1655,25 +1774,144 @@ PAGE-privacy-policy template Styles
 }
 
 
+/* ------------
+
+PAGE-404 template Styles
+
+-------------- */
+.content404 h2 {
+  text-align: center;
+  font-family: "montserratlight";
+  color: #e87c22;
+  padding: 30px 0px 22px 0px;
+}
+.content404 p {
+  line-height: 2;
+  font-family: "montserratlight";
+  color: #777;
+  text-align: center;
+  margin-bottom: 40px;
+}
+.content404 ul.menu {
+  float: right;
+  padding-right: 40px;
+  list-style-type: none;
+}
+.content404 ul.menu li > a {
+  color: #666;
+  font-size: 16px;
+}
+.content404 ul.menu li ul.sub-menu {
+  list-style-type: none;
+  padding-left: 15px !important;
+}
+.content404 ul.menu li ul.sub-menu li > a {
+  color: #999;
+  font-size: 13px;
+}
+.content404 .search-wrap {
+  float: left;
+  width: 80%;
+  position: relative;
+}
+.content404 .search-wrap button {
+  position: absolute;
+  top: 1px;
+  right: 1px;
+  height: 32px;
+  background-color: #ddd;
+  color: #666;
+  font-size: 10px;
+  padding: auto 5px;
+  text-transform: uppercase;
+  border: none;
+  border-left: 1px solid #ccc;
+  border-bottom-right-radius: 3px;
+  border-top-right-radius: 3px;
+}
+.content404 .search-wrap button:hover, .content404 .search-wrap button:hover {
+  background-color: #eee;
+  border-left: 1px solid #ccc;
+  border-bottom-right-radius: 3px;
+  border-top-right-radius: 3px;
+}
+.content404 .search-wrap button:focus {
+  border-color: transparent;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  outline: none;
+}
+.content404 .search-wrap button.clicked:hover {
+  background-color: #575757 !important;
+}
+
+/* ------------
+
+PAGE-search-results template Styles
+
+-------------- */
+.search-results h2 {
+  text-align: center;
+  font-family: "montserratlight";
+  color: #e87c22;
+  padding: 30px 0px 22px 0px;
+}
+.search-results h2 span {
+  color: #666;
+}
+.search-results article {
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+.search-results article h4 a {
+  font-size: 22px;
+  color: #666;
+  text-transform: uppercase;
+}
 
 
 
 
 
 
+/* Javascript Logo */
 
-
-
-
-
-
-
-
-
-
-
-
-
+.mp-logo-wrap {
+  width: 400px;
+}
+.mp-logo {
+  margin: 0px auto;
+  display: block;
+}
+.mp-logo-text {
+  display: none;
+  text-align: right;
+  padding-left: 16px;
+  font-family: "Myriad Pro", sans-serif;
+  font-size: 15px;
+  font-weight: 100;
+  color: #666;
+  text-transform: uppercase;
+}
+.mp-logo-text:nth-child(3) {
+  height: 40px;
+  width: 200px;
+}
+.mp-logo-text-eci {
+  display: none;
+  text-align: right;
+  padding-left: 16px;
+  font-family: "Myriad Pro", sans-serif;
+  font-size: 15px;
+  font-weight: 100;
+  color: #666;
+  text-transform: uppercase;
+}
+.navbar-brand div {
+  margin-left: 58px;
+  margin-top: -3px;
+  z-index: 2;
+  position: absolute;
+}
 
 
 
@@ -1687,11 +1925,18 @@ PAGE-privacy-policy template Styles
 
 /* ------------
 
-MEDIA QUERIES 
+MEDIA QUERIES
 
 -------------- */
-/* -------------------- 1200 ----------------------------*/
-@media (max-width: 1200px) { 
+/* -------------------- MD 1200 ----------------------------*/
+@media (max-width: 1200px) {
+  /* Navbar */
+  ul.navbar-nav, ul.navbar-right {
+    margin-top: 0px;
+    float: left !important;
+    padding-left: 50px;
+  }
+  /* Footer */
   footer.site-footer .sub-footer-links {
     font-size: 11px;
   }
@@ -1704,28 +1949,76 @@ MEDIA QUERIES
     font-size: 24px;
     border-bottom: 1px solid #e87c22;
   }
-}  
 
-/* -------------------- 992 ----------------------------*/
+  /* ------------
+
+  PAGE-our-team template Styles
+
+  -------------- */
+  .our-team .member-block .bio-overlay .well {
+    font-size: 11px;
+    font-family: "montserratlight";
+    background-color: rgba(255,255,255,0.9);
+    padding: 12px;
+    padding-bottom: 2px;
+    width: 177px;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* -------------------- SM 992 ----------------------------*/
 @media (max-width: 991px) {
-  .navbar-brand > img.logo {
+  .navbar-brand > img#mp-logo {
+    display: none !important;
+  }
+  .navbar-brand > div {
     display: none !important;
   }
   img.logo-mobile {
     display: block;
-    padding-top: 15px;
   }
-  
+
 /*---- HEADER ----*/
+
   nav.navbar-default {
     height: 100px;
     background-color: #fff;
     border: none;
   }
+  /* Navbar */
   nav.navbar {
     margin-bottom: 0px;
   }
-
+  .navbar-form .collapse.in {
+    position: absolute;
+    top: 40px;
+    right: 14px;
+    opacity: 1;
+  }
+  .navbar-form .collapsing {
+    position: absolute;
+    top: 40px;
+    right: 14px;
+  }
+  ul.navbar-nav, ul.navbar-right {
+    margin-top: -3px;
+    float: left !important;
+    padding-left: 0px;
+  }
 /* BANNER */
   section.banner .overlay {
     z-index: 2;
@@ -1756,7 +2049,7 @@ MEDIA QUERIES
     float: none !important;
     display: block;
   }
-  
+
 /* Map */
   section.map .map-wrap .circle-wrap {
     left: 20%;
@@ -1836,6 +2129,79 @@ MEDIA QUERIES
     padding: 0px 0px 10px 0px;
     color: #777;
   }
+
+  /* ------------
+
+  PAGE-our-team template Styles
+
+  -------------- */
+  .our-team .member-grid {
+    padding-top: 50px;
+    position: relative;
+    z-index: 2;
+  }
+  .our-team .member-block {
+    padding-top: 10px;
+    position: relative;
+  }
+  .our-team .member-block img.team-pic {
+    display: block;
+    margin: 0px auto;
+    padding-top: 20px;
+  }
+  .our-team .member-block .member-name {
+    color: #e87c22;
+    font-size: 20px;
+    font-family: "montserratlight";
+    margin: 10px 0px 0 0;
+    text-align: center;
+  }
+  .our-team .member-block .member-title {
+    color: #777;
+    font-size: 17px;
+    font-family: "montserratlight";
+    text-align: center;
+    margin-bottom: 0px;
+  }
+  .our-team .member-block .member-bio {
+    display: block;
+    width: 75%;
+    margin: 0px auto;
+    text-align: center;
+  }
+  /*.our-team .member-block button.btn {
+    background-color: transparent;
+    border: 1px solid #e87c22;
+    color: #666;
+    font-family: "montserratregular";
+    text-transform: uppercase;
+    font-size: 16px;
+    padding: 10px 0px 8px 0px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+  }
+  .our-team .member-block button.btn:hover {
+    color: #333;
+  }
+  .our-team .member-block .bio-overlay {
+    z-index: 3;
+    position: absolute;
+    top: 42px;
+    left: 0px;
+  }
+  .our-team .member-block .bio-overlay .well {
+    font-size: 12px;
+    font-family: "montserratlight";
+    background-color: rgba(255,255,255,0.9);
+    padding: 12px;
+    padding-bottom: 2px;
+    width: 100%;
+  }
+  .our-team .member-block .bio-overlay .well p {
+    text-transform: none;
+    color: #e87c22;
+  }*/
 }
 
 
@@ -1843,8 +2209,19 @@ MEDIA QUERIES
 
 
 
-/* -------------------- 776 ---------------------------- */
-@media (max-width: 776px) {
+/* -------------------- XS 776 ---------------------------- */
+@media (max-width: 767px) {
+  .narrow {
+    padding-left: 15px;
+  }
+  /* Page Title Banners */
+  .banner {
+    height: 180px;
+    overflow: hidden;
+  }
+  .banner h2.text-center {
+    margin-top: 90px;
+  }
   .navbar-header {
     height: 90px;
   }
@@ -1852,6 +2229,9 @@ MEDIA QUERIES
   .navbar-toggle {
     margin-top: 5px;
     margin-right: 5px;
+  }
+  .navbar .navbar-form {
+    display: none;
   }
   /* HIDE color Manpower symbol*/
   img.logo-mobile {
@@ -1872,23 +2252,23 @@ MEDIA QUERIES
   }
   .mobile-top-bar a >img {
     opacity: 1.0;
-    transition: opacity linear 0.2s;
-    -webkit-transition: opacity linear 0.2s;
+    transition: opacity linear 0.1s;
+    -webkit-transition: opacity linear 0.1s;
   }
   .mobile-top-bar a:hover > img {
     opacity: 0.8;
   }
   .mobile-top-bar a.pull-right {
     color: #fff;
-    transition: color linear 0.2s;
-    -webkit-transition: color linear 0.2s;
+    transition: color linear 0.1s;
+    -webkit-transition: color linear 0.1s;
     font-size: 16px;
   }
   .mobile-top-bar a.pull-right:hover {
     color: #6e9082;
     text-decoration: none;
   }
-  
+
 /* Mobile hide on collapse */
 .navbar-default .hide-on-collapse {
   position: relative;
@@ -1908,18 +2288,23 @@ button.x-toggle {
   padding-right: 5px;
 }
 button.x-toggle span {
-  color: #595959;
+  color: #4f4f4f;
   padding-right: 10px;
   font-size: 30px;
-  transition: color linear 0.2s;
-  -webkit-transition: color linear 0.2s;
+  transition: color linear 0.1s;
+  -webkit-transition: color linear 0.1s;
+}
+.hide-on-collapse button.x-toggle:hover > span {
+  color: #777;
+}
+button.x-toggle:focus {
+  outline: none;
+  box-shadow: none;
+  -webkit-box-shadow: none;
 }
 .btn-default.active, .btn-default.focus, .btn-default:active, .btn-default:focus, .btn-default:hover, .open>.dropdown-toggle.btn-default {
   border: none;
   background-color: transparent;
-}
-.hide-on-collapse .btn-default:hover span {
-  color: #000;
 }
 
 
@@ -1959,9 +2344,9 @@ button.x-toggle span {
     margin: 0px auto;
     width: 100%;
     float: none;
-    background-color: rgba(255,255,255,1.0);
+    background-color: rgba(255,255,255,1);
     padding: 24px 0px;
-  }  
+  }
   .mobile-logo img {
     padding-left: 10px;
   }
@@ -1970,12 +2355,13 @@ button.x-toggle span {
       /* hide TOP section */
       nav.navbar-default .top {
         display: none;
-      } 
+      }
       ul.navbar-nav, ul.navbar-right {
         margin: 0px auto;
         width: 100%;
         float: none;
-        background-color: rgba(255,255,255,1.0);
+        background-color: rgba(255,255,255,1);
+        border-bottom: 1px solid #e87c22;
       }
       ul.navbar-nav li, ul.navbar-right li {
         padding: 10px 0px;
@@ -2031,6 +2417,11 @@ section.footer ul.site-links {
 section.footer .portland-address {
   text-align: right;
 }
+
+  /* ALL CONTENT */
+  #content article {
+    margin-bottom: 0px !important;
+  }
 
   /* Our Services - Page */
   .our-services-content .narrow {
@@ -2158,11 +2549,81 @@ section.footer .portland-address {
     width: 100% !important;
   }
 
-  /* Job Resources page */
-  
+  /* ------------
+
+  PAGE-our-team template Styles
+
+  -------------- */
+  .our-team .member-grid {
+    padding-top: 50px;
+    position: relative;
+    z-index: 2;
+  }
+  .our-team .member-block {
+    padding-top: 30px;
+    position: relative;
+  }
+  .our-team .member-block img.team-pic {
+    display: block;
+    margin: 0px auto;
+    padding-top: 20px;
+  }
+  .our-team .member-block .member-name {
+    color: #e87c22;
+    font-size: 20px;
+    font-family: "montserratlight";
+    margin: 10px 0px 0 0;
+    text-align: center;
+  }
+  .our-team .member-block .member-title {
+    color: #777;
+    font-size: 17px;
+    font-family: "montserratlight";
+    text-align: center;
+    margin-bottom: 0px;
+  }
+  .our-team .member-block .member-bio {
+    display: block;
+    width: 75%;
+    margin: 0px auto;
+    text-align: center;
+  }
+  .our-team .member-block button.btn {
+    background-color: transparent;
+    border: 1px solid #e87c22;
+    color: #666;
+    font-family: "montserratregular";
+    text-transform: uppercase;
+    font-size: 16px;
+    padding: 10px 0px 8px 0px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+  }
+  .our-team .member-block button.btn:hover {
+    color: #333;
+  }
+  .our-team .member-block .bio-overlay {
+    z-index: 3;
+    position: absolute;
+    top: 42px;
+    left: 0px;
+  }
+  .our-team .member-block .bio-overlay .well {
+    font-size: 12px;
+    font-family: "montserratlight";
+    background-color: rgba(255,255,255,0.9);
+    padding: 12px;
+    padding-bottom: 2px;
+    width: 100%;
+  }
+  .our-team .member-block .bio-overlay .well p {
+    text-transform: none;
+  }
+
 
   /* ------------
-  PAGE-downloads template Styles 
+  PAGE-downloads template Styles
   -------------- */
 
   .downloads-content ul.downloads-list {
@@ -2172,8 +2633,110 @@ section.footer .portland-address {
     list-style-type: none;
   }
 
-}
+  /* ------------
+  PAGE-job-resources template Styles
+  -------------- */
+  .job-resources-content {
+    padding: 30px 0px 30px 0px;
+  }
+  .job-resources-content p {
+    line-height: 2;
+    font-family: "montserratlight";
+    color: #777;
+    text-align: center;
+    width: 100%;
+    margin: 0px auto;
+  }
+  .job-statistics {
+    background-color: #e87c22;
+    padding: 30px 15px 40px 15px;
+  }
+  .job-statistics h4 {
+    font-size: 26px;
+    color: #fff;
+    text-align: center;
+    font-family: "montserratlight";
+    padding-bottom: 0px;
+  }
+  .job-statistics p.percentage {
+    text-align: center;
+    font-size: 52px;
+    font-family: "montserratregular";
+    padding: 0px 0px 0px 0px;
+    margin-bottom: 0px;
+  }
+  .job-tips .job-tips-tabs .panel-heading h4.panel-title {
+    text-align: left;
+    padding: 0px 0 24px 0;
+    margin: auto;
+    font-size: 18px;
+    border-bottom: 1px solid #e87c22;
+  }
+  .dos-donts {
+    padding: 30px 15px;
+    background-color: #f5faf8;
+  }
+  .dos-donts .col-xs-12 h4 {
+    text-align: center;
+    font-size: 32px;
+    color: #666;
+    text-transform: uppercase;
+    padding-bottom: 0px;
+    border-bottom: 1px solid rgba(255,255,255,0.4);
+  }
+  .dos-donts .col-xs-12:first-child h4 {
+    padding-top: 0px;
+  }
+  .dos-donts .col-xs-12:last-child h4 {
+    padding-top: 30px;
+  }
+  .dos-donts .col-xs-12 ul li {
+    color: #666;
+    font-family: "montserratlight";
+    font-size: 13px;
+    padding: 4px;
+  }
 
+  /* ------------
+  PAGE-clients template Styles
+  -------------- */
+  .clients-form-wrap {
+    width: 100%;
+    margin: 0px auto;
+  }
+
+  /* ------------
+  PAGE-contact template Styles
+  -------------- */
+  .contact-richmond {
+    text-align: center;
+    border-right: none;
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+    padding: 20px 0px;
+    margin: 0px;
+  }
+  .contact-portland {
+    text-align: center;
+    padding: 20px 0px;
+    margin: 0px;
+  }
+  .contact-form h3.contact-us {
+    font-size: 26px;
+    font-family: "montserratlight";
+    text-align: center;
+    color: #666;
+    padding-top: 20px;
+  }
+  .contact-content {
+    width: 100%;
+    margin: 0px auto;
+  }
+  .gform_wrapper {
+    overflow: inherit;
+    margin: 0em 0;
+    max-width: 98%;
+  }
+}
 
 
 
@@ -2266,7 +2829,7 @@ section.footer .portland-address {
 
 
 
-/* 
+/*
 -----------------------------------------------------
 SIMON PADBURY DEFAULT "BST" THEME STYLES
 -----------------------------------------------------
@@ -2279,7 +2842,7 @@ SIMON PADBURY DEFAULT "BST" THEME STYLES
 /*
 Max content widths
 */
-.size-auto, 
+.size-auto,
 .size-full,
 .size-large,
 .size-medium,
@@ -2344,7 +2907,7 @@ input:focus:-moz-placeholder { color: transparent; } /* FF 4-18 */
 input:focus::-moz-placeholder { color: transparent; } /* FF 19+ */
 textarea:focus::-webkit-input-placeholder { color: transparent; }
 textarea:focus:-moz-placeholder { color: transparent; } /* FF 4-18 */
-textarea:focus::-moz-placeholder { color: transparent; } /* FF 19+ */ 
+textarea:focus::-moz-placeholder { color: transparent; } /* FF 19+ */
 
 /*
 Comments
@@ -2368,7 +2931,7 @@ ol.commentlist > li {
 ol.commentlist > li:before {
   content: "Thread " counter(li); /* Use the counter as content */
   counter-increment: li; /* Increment the counter by 1 */
-  position:absolute;  
+  position:absolute;
   top: 0;
   right: 0;
   border-bottom: 1px solid #ddd;

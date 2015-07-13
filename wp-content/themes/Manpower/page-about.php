@@ -23,9 +23,7 @@
   </div><!-- /.row -->
 </div><!-- /.container -->
 
-<!-- <!-- Manpower Richmond video -->
-<div class="container-fluid mpr-vid">
-  <iframe width="1280" height="720" src="https://www.youtube.com/embed/aCmPDi5u3vg" frameborder="0" allowfullscreen></iframe>
-</div> -->
+<!-- Manpower Richmond video -->
+<div class='embed-container'><iframe src='https://www.youtube.com/embed/aCmPDi5u3vg' frameborder='0' allowfullscreen></iframe></div>
 
 <?php get_template_part('includes/footer'); ?>
