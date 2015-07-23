@@ -79,6 +79,7 @@
 		});
 
 
+		$('.cff-page-name').css('padding-top', '0px');
 
 
 	});

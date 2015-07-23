@@ -364,10 +364,13 @@ INCLUDES Styles
   }
 
   /* Associates Links */
-  .col-xs-6 p:first-child {
+  section.footer .col-xs-6 p:first-child {
     text-transform: uppercase;
     color: #383839;
-    margin-bottom: 4px;
+    margin-bottom: 14px;
+  }
+  section.footer .col-xs-6 p:nth-child(2) {
+    margin-bottom: 20px;
   }
   ul.associates-links {
     list-style-type: none;
@@ -390,6 +393,19 @@ INCLUDES Styles
   ul.site-links > li > a:hover {
     opacity: 0.9;
   }
+  
+  /* Facebook Feeds */
+  p.fb-feed-title {
+    text-transform: uppercase;
+  color: #383839;
+  margin-bottom: 20px;
+  }
+  .richmond-address {
+    padding-top: 40px;
+  }
+  .portland-address {
+    padding-top: 20px;
+  }
   .richmond-address p {
     width: 100%;
     display: block;
@@ -411,6 +427,57 @@ INCLUDES Styles
     color: #383839;
     font-size: 14px;
     text-transform: uppercase;
+  }
+  /* Custom Facebook Feeds */
+  .cff-author-img {
+    display: none !important;
+  }
+  #cff .cff-author .cff-author-text .cff-page-name {
+    padding-left: 0px;
+    padding-bottom: 10px !important;
+    padding-top: 0px !important;
+    font-size: 14px;
+    color: #666;
+    text-transform: uppercase;
+  }
+  .fb-richmond #cff .cff-author .cff-author-text .cff-page-name {
+    color: #5B8DBA;
+  }
+  .fb-portland #cff .cff-author .cff-author-text .cff-page-name {
+    color: #e87c22;
+  }
+  #cff .cff-author .cff-author-text span {
+    height: auto;
+  }
+  #cff .cff-author {
+    margin-bottom: 0px !important;
+  }
+  #cff p {
+    margin-top: 0px;
+  }
+  #cff .cff-item {
+    padding: 0px !important;
+    padding-bottom: 10px !important;
+    border-bottom: 1px solid rgba(0,0,0,0.1) !important;
+    margin-bottom: 10px !important;
+  }
+  .fb-portland #cff .cff-item:last-child {
+    padding: 0px !important;
+    padding-bottom: 0px !important;
+    border-bottom: none !important;
+    margin-bottom: 0px !important;
+  }
+  #cff .cff-item .cff-post-text .cff-text {
+    font-size: 13px;
+    font-family: "montserratlight";
+    color: #666;
+  }
+  #cff .cff-date {
+    font-size: 11px;
+    font-family: "montserratregular";
+    text-transform: uppercase;
+    color: #333;
+    padding-top: 6px;
   }
 
 /* ------ SubFooter */
@@ -1425,9 +1492,52 @@ PAGE-job-resources template Styles
   font-family: "montserratlight";
   padding: 40px 0px 20px 0px;
 }
+/* Tabs */
+.job-tips-tabs ul.nav-tabs {
+  margin: 0px auto;
+  border-bottom: none;
+}
+.job-tips-tabs ul.nav-tabs>li {
+  font-family: 'montserratregular';
+  font-size: 16px;
+  text-transform: uppercase;
+  padding-bottom: 1px;
+}
+.job-tips-tabs .nav-tabs>li>a {
+  border: none;
+}
+.job-tips-tabs .nav-tabs>li>a:hover {
+  background-color: transparent;
+  color: #3E639B;
+}
+.job-tips-tabs ul.nav-tabs>li.active>a {
+  background-color: rgba(200,200,200,0.1);
+  border: none;
+  color: #e87c22;
+}
+.job-tips-tabs .tab-content {
+  background-color: rgba(200,200,200,0.1);
+  border: none;
+}
+.job-tips-tabs .tab-content p {
+  padding: 20px 40px;
+  text-align: center;
+  font-family: "montserratlight";
+  font-size: 13px;
+  color: #666;
+}
+
+.job-tips .job-tips-tabs h6.text-center {
+  font-size: 18px;
+  font-family: "montserratregular";
+  padding: 40px 0px 15px 0px;
+  color: #e87c22; 
+}
+
+/* Accordion */
 .job-tips .job-tips-tabs .panel-heading h4.panel-title {
   text-align: left;
-  padding:0px 0 24px 0;
+  padding:0px 0 14px 0;
   margin: auto;
   font-size: 24px;
   border-bottom: 1px solid #e87c22;
@@ -1449,14 +1559,17 @@ PAGE-job-resources template Styles
 }
 .job-tips .job-tips-tabs .panel-heading {
   background-color: transparent;
+  padding-top: 10px;
+  padding-bottom: 0px;
 }
 
 
 /* Open Panel (collapsed panel) */
 .job-tips .job-tips-tabs .panel-group .panel .panel-collapse {
   background-color: rgba(200,200,200,0.1);
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
 }
-
 .job-tips .job-tips-tabs .panel-group .panel .panel-collapse ul>li {
   font-size: 16px;
   font-family: "montserratregular";
@@ -1944,9 +2057,9 @@ MEDIA QUERIES
   /* Job Resources page */
   .job-tips .job-tips-tabs .panel-heading h4.panel-title {
     text-align: left;
-    padding:0px 0 24px 0;
+    padding:0px 0 15px 0;
     margin: auto;
-    font-size: 24px;
+    font-size: 20px;
     border-bottom: 1px solid #e87c22;
   }
 

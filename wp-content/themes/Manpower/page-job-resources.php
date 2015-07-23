@@ -40,14 +40,62 @@
   </div>
 </div>
 
-
-
 <!-- Job Tips -->
 <div class="container job-tips">
   <div class="row">
     <div class="col-xs-10 col-xs-offset-1 narrow">
       <div class="job-tips-tabs">
         <h4>Tips for Job Seekers</h4>
+        
+        <div class="tabs-wrap">
+          <!-- Tabs for Job Tips -->
+          <ul class="nav nav-tabs">
+            <li class="active"><a href="#one" data-toggle="tab">Practice</a></li>
+            <li><a href="#two" data-toggle="tab">Prepare</a></li>
+            <li><a href="#three" data-toggle="tab">Get Ready</a></li>
+            <li><a href="#four" data-toggle="tab">Stay Calm</a></li>
+            <li><a href="#five" data-toggle="tab">Show What You Know</a></li>
+          </ul>
+          
+          
+          <div class="tab-content">
+            <div class="tab-pane active" id="one">
+              <p>Practice answering interview questions and practice your responses to the typical job interview questions and answers most employers ask. Think of actual examples you can use to describe your skills. Providing evidence of your successes is a great way to promote yourself as a candidate.</p>
+            </div>
+            <div class="tab-pane" id="two">
+              <p>Prepare a response so you are ready for the question "What do you know about our company. Know the interviewer's name and use it during the job interview. If you're not sure of the name, call and ask prior to the interview. Try to relate what you know about the company when answering questions.</p>
+            </div>
+            <div class="tab-pane" id="three">
+              <p>Make sure you go into a job interview having showered and wearing clean clothes. If you like wearing cologne or perfume, don't wear any on the day of the interview. What's subtle smelling to you may be overwhelming to your interviewer. <br><br>
+              Bring a copy of your resume.  <br><br>
+              Take a pen and paper for note taking.  <br><br>
+              Turn off your cell phone or leave it in the car.  <br><br>
+              Be on time for the interview. On time means five to ten minutes early. If need be, take some time to drive to the office ahead of time so you know exactly where you are going and how long it will take to get there.  Go to the interview alone.</p>
+            </div>
+            <div class="tab-pane" id="four">
+              <p>During the job interview try to relax and stay as calm possible. Take a moment to regroup. Maintain eye contact with the interviewer. Listen to the entire question before you answer and pay attention - you will be embarrassed if you forget the question! <br><br>
+              Have good eye contact. Staring at the floor, ceiling, or wall when speaking or listening makes you appear disinterested. </p>
+            </div>
+            <div class="tab-pane" id="five">
+              <p>
+                Try to relate what you know about the company when answering questions. When discussing your work history and skills match them to what the company is looking for.
+                <br><br>
+                <strong>Don't make jokes.</strong> Too many people think they are funny when in reality they're not. A job interview isn't the place to test your material. Be friendly and outgoing, save the jokes.
+                <br><br>
+                <strong>Don't badmouth a boss.</strong> Bad mouthing a previous boss in a job interview is a huge negative. They may have been the worst boss in the world but expressing that in a job interview is a huge mistake.
+                <br><br>
+                <strong>Don't babble.</strong> When answering a question, answer the question. Don't start out answering a question and then veer off to talk about something else. Make sure your answer directly reflects the question being asked.
+                <br><br>
+                Don't play with your face/hair. Interviews can be a nervous experience but rubbing your chin, twirling your hair, or anything else along those lines makes you look like you're lying or lacking confidence, both not good.
+                <br><br>
+                <strong>Follow Up.</strong> Follow up by thanking them for the opportunity to interview for the job.
+              </p>
+            </div>
+          </div>
+        </div>
+        
+
+        <h6 class="text-center">More tips and advice to help you get the job!</h6>
 
         <!-- Accordion for Job Tips -->
         <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">

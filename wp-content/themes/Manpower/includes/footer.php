@@ -26,7 +26,7 @@
               </ul>
             </div>
           </div>
-          
+
           <div class="row">
             <!-- Manpower Richmond Address -->
             <div class="col-xs-6 col-md-12 richmond-address">
@@ -46,12 +46,14 @@
 
         <!-- Facebook Feed - MP Richmond/Portland -->
         <div class="col-sm-12 col-md-7 col-lg-8">
+          <p class="fb-feed-title"><strong>Facebook</strong></p>
+
           <div class="fb-richmond">
-            <?php echo do_shortcode('[custom-facebook-feed id=ManpowerRichmond num=2 limit=2]') ?>
+            <?php echo do_shortcode('[custom-facebook-feed id=ManpowerRichmond num=2 limit=2 exclude=media,likebox,link,social datepos=below dateformat=2 showheader=false]') ?>
           </div>
 
            <div class="fb-portland">
-            <?php echo do_shortcode( '[custom-facebook-feed id=ManpowerPortlandIN num=2 limit=2]' ) ?>
+            <?php echo do_shortcode( '[custom-facebook-feed id=ManpowerPortlandIN num=2 limit=2 exclude=media,likebox,link,social datepos=below dateformat=2 showheader=false]' ) ?>
           </div>
             
         </div>

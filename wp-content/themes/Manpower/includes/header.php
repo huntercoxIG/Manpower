@@ -7,8 +7,7 @@
   	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<?php wp_head(); ?>
 
-	<!-- Montserrat - google Font -->
-	<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+
   <!-- Embed.ly -->
   <link rel="stylesheet" href="http://api.embed.ly/1/oembed?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DaCmPDi5u3vg&maxwidth=500">
 
